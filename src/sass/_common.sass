@@ -1,0 +1,98 @@
+//vars
+$green: #6dca14
+$red: #e86278
+$white: #fff
+$black: #000
+
+//fonts
+
+/*=== import ===*/
++font("Clear Sans Bold Italic", "ClearSans-Bolditalic")
++font("Clear Sans Bold", "ClearSans-Bold")
++font("Clear Sans Medium Italic", "ClearSans-Mediumitalic")
++font("Clear Sans Medium", "ClearSans-Medium")
++font("Clear Sans Regular", "ClearSans-Regular")
++font("Clear Sans Thin", "ClearSans-Thin")
++font("Clear Sans Light", "ClearSans-Light")
+
+/*=== mixins ===*/
+=bold-italic
+	font-family: "Clear Sans Bold Italic", sans-serif
+	font-weight: normal
+=bold
+	font-family: "Clear Sans Bold", sans-serif
+	font-weight: normal
+=medium-italic
+	font-family: "Clear Sans Medium Italic", sans-serif
+	font-weight: normal
+=medium
+	font-family: "Clear Sans Medium", sans-serif
+	font-weight: normal
+=regular
+	font-family: "Clear Sans Regular", sans-serif
+	font-weight: normal
+=thin
+	font-family: "Clear Sans Thin", sans-serif
+	font-weight: normal
+=light
+	font-family: "Clear Sans Light", sans-serif
+	font-weight: normal
+
+//icons
+.icon-arr
+	font-size: 6px
+	fill: $black
+
+//basic styles
+body
+	background: $white
+	+css-lock(16, 50, 600, 1000)
+	line-height: 1.4
+	+regular
+a
+	text-decoration: none
+	color: inherit
+button
+	background: none
+	outline: none
+	border: 0
+
+//buttons
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 50px
+	padding: 5px 15px
+	position: relative
+	min-width: 200px
+	color: $white
+	font-weight: 400
+	font-size: 14px
+	line-height: 1.4
+	+bold
+	text-transform: uppercase
+	letter-spacing: 1.4px
+	background: $red
+	transition: background 0.25s
+	&:hover
+		background: darken($red, 5%)
+	&:active
+		top: 1px
+	&_primary
+		background: $green
+		&:hover
+			background: darken($green, 5%)
+	&_secondary
+		background: $white
+		font-size: 12px
+		color: $black
+		&:hover
+			background: darken($white, 5%)
+		//	.icon
+		//		transform: translateX(3px)
+        //
+		//.icon
+		//	margin: 0 0 0 6px
+		//	transition: transform 0.25s
+
