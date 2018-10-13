@@ -1,0 +1,243 @@
+.out
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+/* == Header start == */
+.header
+	position: relative
+	&__top
+		height: 38px
+		display: flex
+		justify-content: space-between
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			background-color: #e5e5e5
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+	&__top-left
+		display: flex
+		align-items: center
+	&__top-rigth
+		display: flex
+		align-items: center
+	&__bottom
+		height: 90px
+		display: flex
+		justify-content: space-between
+		position: relative
+	&__bottom-left,
+	&__bottom-right
+		display: flex
+		align-items: center
+	&__bottom-center
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+	&__btn
+		min-width: 172px
+		font-size: 12px
+		+bold
+		letter-spacing: 0.6px
+		margin: 0 0 0 56px
+	&__messengers
+		margin: 0 0 0 10px
+	&__logo
+		background: url(../img/logo-red.png) no-repeat center
+		width: 200px
+		height: 50px
+		display: block
+		transition: opacity 0.25s
+		+hide-text
+		&:hover
+			opacity: 0.7
+.nav
+	position: relative
+	display: flex
+	align-items: center
+	&__link
+		color: $black
+		font-size: 10px
+		+bold
+		line-height: 1.4
+		letter-spacing: 0.25px
+		text-transform: uppercase
+		transition: color 0.25s
+		padding: 10px 15px
+		&.is-active,
+		&:hover
+			color: lighten($black, 74%)
+		&:first-of-type
+			padding-left: 0
+		&:last-of-type
+			padding-right: 0
+.form-links
+	+bold
+	color: $black
+	font-size: 12px
+	letter-spacing: 0.6px
+	display: inline-flex
+	align-items: center
+	&__item
+		color: inherit
+		font-family: inherit
+		font-size: inherit
+		line-height: 1.4
+		padding: 5px 8px
+		transition: color 0.25s
+		&:hover
+			color: lighten($black, 55%)
+.tselect
+	display: none
+.messengers
+	+hide-text
+	display: inline-flex
+	align-items: center
+	&__item
+		margin: 0 15px 0 0
+		&:last-of-type
+			margin: 0
+	&__links
+		display: inline-block
+		cursor: pointer
+		transition: opacity 0.25s
+		&:hover
+			opacity: 0.6
+	&__whatsapp
+		width: 25px
+		height: 25px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAACP0lEQVRIS6VW23XbMAwFyAHqTtB0gjYTNBTk76QT1Jmg8QRNJmg3qDNBlG+LpjNBM4IzQeMBTPRAJXVoWrKUhOfohwRx8bi4IsKR5Zyb7Ha7c0S8QMQJM58F8w0ibrz3ldb6wRjzeMwPdh2Kc+/9dwC4AoDJMQfhrFJKzY0xmy7bAxDn3GfvvRvpPPd5SUSLfHMPxFo7A4CfrwSIvhdEdJkCtSBvzCAPfk5Ev+JmAxJ68AcATkbUf5SJ995Mp9O1GDcg1tprAPiR3d4y80xYBQC/R3lOjBBxXRSFSUGeAeBd6iiNpK7rChHPXwoUfWBd1zIDd3kWRNRSt8dmEBMRb4uimOFqtVow87f0BjM/lmV5mu5Za3nQ66HBhog+orVWmvMlP1dKvTfGSBn7ejYKk4hQQEQSPnXcaGl4xGYQSCl1KiAiBR86rJ/FQKQizJBkvEeOQQQAiCCd5Wqol9BwuVyeKaWqFIiZ7xFRRLMXvClXV+OzCFuZcM6deO9Fm6SHN0R0HQZZhFS+HGwrLJVyiV4NDdueHkn5cnnvGuiWwiGSv0P1FVoz8zxKRW7fw9JGlRtZGVGy1qf0SUqmtb4XiocgRbmlIul6IqJGC6N2jSnZULJ758z8tSxLIcp/kNdqUx9q7EU8j5kcCOSLwk6MhdZlWV6k9zEMmvxL3rzyDNpM+v4lACBK0CU3XcE8MfNV7EFukArkAwDIq2MdZ0CmXGs9C0+hXHq2iFjJs6jPeZuJOOrjfh6RlFb2ht5Z+b1/KGUsAxHXOAIAAAAASUVORK5CYII=) no-repeat center
+	&__viber
+		width: 18px
+		height: 18px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABxUlEQVQ4T42U3VUCMRCFZyYFiBVIB2IFErI8gx3YgXagdGAHYgf4zC7BDrQCLQHf2RnP5SScuCKah92c/Hy5uXN3mVKLMfbbtp04556895s8jvdqtZqb2buZfTjnnrvzWMN4NE3zQEQ36JvZq3POl4tjjANVHTLzwMymRPQoIrNyDS+Xy6GIxFIBYFVVXRRqAZokRS+qek1EUxEZZhg3TXNPRHclKPVnIQTMUYyxh81mBlVDMwOImPk+wwDC4OMB0CaEcJrH67rGlU6cc2+qOici2NHHPA7kdNoHFnVgnyGEXgd0zcwGf1R1LSK48ruInGazu6o+k+TXrtK6rhdENGfmW7xhPjMvdqBUOag66/pzAIQrwp9BOVeC9qqYeT0ajfwB3/ZDsAQebbfbnohM9yCsgGxmnqCvqn48Hq+PwYp49L+BkvHYfE5EGxG58N7jyn+2b6CUmb6qwmRUETCkfG86csfMl4hAVVVP+YQfoARDWaEsRwJVQoXg4y6MyfA1M18h3QdBBQzBwzWPtZ3qX0EJ1mvbFmp2BTjSXo6C8sb0PSKA3fTnJbN/gbI6VQWsC3zDV/BvUJEZ/AnwV0CyFyEEfLz0Bdie7To8DadMAAAAAElFTkSuQmCC) no-repeat center
+	&__telegram
+		width: 25px
+		height: 25px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAACeUlEQVRIS72Wu48SURTGvwGKYXkIBc9ETEwMj0oLOiqBwoLGZkv3P7C002hn6X9g6TY2FBYMJpuQUFBgQijIBsFIASQ8hRkILNecu8zIsjMs7oonIWTmzHy/Oed8984I2BGFQsExm82eA3gGIA7gAQAzgAsAPwCUAHwRRfFzIpH4ZSQl6CWy2eyR1Wp9BeAlgHu7HmSdGwH4oCjK+0wmI29ffw2Sy+WeCIJwCuDRHuLbl5wzxo7T6XR5M3EFks/nnzLGsgCObgFQb5EFQcgkk8mv6gkNsq6gcEeABmKMJdSKOGQ9g2+3bJFR0eeKojymGXGIJElvAby+Q4uMbn2XSqXeCGub/tzTRdfETCYTPB4Plssler3edn4kiuJ9QZKkFwA+/m0VDocDwWAQfr8fFosF3W4XlUpFT+aEIJ8AHO8DITESJXGCLBYLmM1mUDX1eh3NZlNP5pQgdQAPd0HcbjcX9nq9XJBiNBpxgN1u58flchn9fl9P5jtBluut4soFoigiEAjwn9Vq1XLz+ZyLOZ1O2Gw27fzZ2Rmfi05cEIRtJ2KxGG+LIPxZq6vVCoPBAJPJBD6fD/QQ2qKQZRSLRcNm6FZCT0kQcg2JybLMncMY4y3bBJByu91GtVo1gvBKds6E5uFyuXhV1LptACnXajW0Wi0jCJ/JTneReCgUwnA4RCQS0Qa9qVgqlTAej40g3F03rhNqUafTwXQ6RTwe505Tg2ZFQ6d/gzjZa8WTTWnoVBWtFWpbOBzmFqYKqBKDuFzxlLxp71JdRoNXg+wbjUa5IRqNhhHkcu+i7H/ZhQl08PeJWuvB34wq6ODveBV08K+VTZv8q++u37PEJ275bTU+AAAAAElFTkSuQmCC) no-repeat center
+.pselect
+	display: none
+.cselect
+	display: none
+/* == Header end == */
+
+/* == Footer start == */
+.footer
+	position: relative
+	margin: auto 0 0
+	&__top-in
+		position: relative
+		padding: 20px 0 10px
+		display: flex
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			height: 1px
+			background: #e5e5e5
+	&__top-left
+		width: calc(100% - 300px)
+	&__top-right
+		width: 300px
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+	&__bottom
+		background-color: #e8e8e8
+	&__bottom-in
+		height: 80px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__bottom-left
+		display: flex
+	&__messengers
+		margin: 15px 0 0
+	&__logo
+		width: 120px
+		height: 30px
+		background: url(../img/logo-black.png) no-repeat center
+		display: inline-block
+		transition: opacity 0.25s
+		+hide-text
+		&:hover
+			opacity: 0.7
+.fnav
+	column-count: 3
+	&__item
+		display: flex
+	&__link
+		+regular
+		color: #818181
+		font-size: 16px
+		line-height: 1.6
+		position: relative
+		padding: 5px 10px
+		display: inline-block
+		transition: color 0.25s
+		&:hover
+			color: darken(#818181, 45%)
+		&:before
+			content: ''
+			display: block
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: $black
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto
+.tel
+	color: $black
+	font-size: 30px
+	+bold
+	transition: color 0.25s
+	cursor: pointer
+	&:hover
+		color: lighten($black, 50%)
+.copyright
+	font-size: 14px
+	line-height: 1.1
+	+regular
+	color: $black
+	margin: 0 0 0 30px
+.social
+	display: flex
+	&__item
+		margin: 0 15px 0 0
+		display: flex
+		align-items: center
+		&:last-of-type
+			margin: 0
+	&__link
+		display: block
+		transition: opacity 0.25s
+		&:hover
+			opacity: 0.6
+	&__fb
+		width: 8px
+		height: 17px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAARCAYAAADg1u3YAAAAc0lEQVQoU9WQQQ2AMBAEp0pAAg4ICrCABRwgAQeAE3BSCyiALOklLUlJv9yzN93Z1pHOBPRAY8cu2g/A8rpADOxAWwqMwCw4l9ABSnwAFbsAdaiDYgW8AVrm5lTCF3CYQglSVCFqCwpfVNL88T8kr/g/cANTiCGeEtunhQAAAABJRU5ErkJggg==) no-repeat center
+	&__tw
+		width: 18px
+		height: 15px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAYAAADphp8SAAABEElEQVQ4T52Ti1FCQQxFDxVIB1ICVoB0ABUIFSgVKBUAHWgHdqBUoFSgVgB04Jwly7yRXT5mhs+8tzm5yc222EUb2MT/2s8AeAS6wCcwBV6BW3NbQAf4APpxoAR6AGaFF9/AVpggiW+haAi8FxJUe1WRqrpFVvTVOPQcsq1m2IqKazEB5oIMVfT+nLSSz53f6AjoxpEIsqKQp0g6MfOD10mMX1ZcX5od53/CrAQy5sD9P2Avue0MkmFr2lxzp1THlUkuN0GqurtgTstYnVSgCXLo0s9VlNzKMpsgn7nlWn2qxTHgvu2jBPI+HdubA0huzcuogutsZcW9VRTYt1NSZEsC/eQN9zKa5FXRiCIgw34BN1AvsE1hXigAAAAASUVORK5CYII=) no-repeat center
+	&__vk
+		width: 26px
+		height: 16px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAABU0lEQVQ4T62VYU0DQRCFvyoACVQBRQGgAKqA4gAUAA5wACgAB4ACigKKA+qAfJdbsjeZvbYJk/RHZ6fz3r55s50AM2CPYbxXX/eBB+A81LwA85Dza9ZvPQF+EqA74LZvItAVcJM0PQXeqvwJ8JrUIdAjcBEOV8A05DJCESjrZZsngQ6Ar4TFZU+iHMn8ONTVQK0+/mQqkKHeZxtutQmodZtuDAWope01cN8TGAPSAB+JKp+9OboZjUnjXI4AZ7YEDhvSZWdrwAt4NgBqsbJQBypvDOUyFslZrcYAyNqWzpljx3Lfvcn+amrpTLozyhQXeFcgeyi50ncRgcz5Ajzv2rkhqyvSBPpPCR1FB5bdqEionaPLInHtq1H8tGo7sBbQtmA+qrrRV0F3tmY7HwMq7GXro5o1qZ8g10MVsrrVNkDldu6KC6gzDR0V/zoEk1ipKWSXvyaxRL8mksPsAAAAAElFTkSuQmCC) no-repeat center
+	&__insta
+		width: 20px
+		height: 20px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABfElEQVQ4T52VgTFDURBFTypABZIK6AAVoAJKoAJUgA6oABVEOqACVIAKYs6b3e/5k/cT2ZlM5ue9vf/u3rubEb+xCZwAR8Au4PNQfAEvwCNwD/jMKDIEmFYg33F5CNCcjbgg2IE5AsrkLb6vgJt82xKGHpt7BlxEzkRAf7gGBLtcASSvyPAQuK1AzwV8BvaArX8wEzTzJHIXVc4ELM1siCBjhRrHnfdIFuQ0PlaoOOLMBZwDM2C/V67qWZLhuWElhmfHvfuFcQtQZjb6NWwkM0Omgu0s6PkgoADbwARIsCQkqK7wd88zmoBa4bPRhj/JlY87kVolt/q6NuAqJX9U6i9lmKJoB9WsRXmIWe8PwqAoaY20jZeNtNZTqF87pwMshoxJ6VmrjKIGVnHDMp2KRSPabZt1R69+eVqpjN66y6EGzJ6X5aDvbLq7zQOXZd/M/VbUJnfWzXOHjusFa+n1wlThoai3umAKVhZshkwVIP8CErwFmlvd2VaoIsoPH3ZzbE/8tukAAAAASUVORK5CYII=) no-repeat center
+/* == Footer end == */
