@@ -1,0 +1,69 @@
+.info
+	background-color: $bg-gray
+	padding: 50px 0 120px 0
+	font-size: 14px
+	&__in
+		max-width: 760px
+	&__body
+		margin: 37px 0 66px 0
+	&__footer
+		background-color: white
+	&__subtitle
+		color: $gray
+		margin-top: 38px
+	&__title
+		margin: 42px 0 14px 0
+		font-size: 24px
+		+regular
+		position: relative
+
+.info__list-item
+	margin: 13px 0
+	box-shadow: 0 1px 4px rgba(28, 28, 28, 0.15)
+	border-radius: 3px
+	background-color: #ffffff
+	padding: 12px 16px 16px 20px
+.info__list-title
+	+bold
+	position: relative
+	cursor: pointer
+	.icon
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		+tr(transform .3s ease)
+	&.is-active
+		.icon
+			transform: translateY(-50%) rotate(180deg)
+	// &:after
+	// 	content: ''
+	// 	z-index: 1
+	// 	position: absolute
+	// 	top: 40%
+	// 	right: 2px
+	// 	border: solid #bcbcbc
+	// 	border-width: 0 2px 2px 0
+	// 	display: inline-block
+	// 	padding: 5px
+	// 	transform: translateY(-50%) rotate(45deg)
+	// 	+tr(transform .3s ease-in-out)
+	// &.is-active
+	// 	&:after
+	// 		transform: translateY(-50%) rotate(-135deg)
+.info__list-content
+	color: $gray
+	max-height: 0
+	+tr(max-height .3s ease-in)
+	overflow: hidden
+	h5
+		padding-top: 5px
+		font-size: 14px
+		+regular
+	p
+		padding: 2px 0
+	ul
+		margin-bottom: 11px
+		list-style-type: disc
+		font-size: 14px
+		padding-left: 17px

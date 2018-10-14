@@ -3,6 +3,8 @@ $green: #6dca14
 $red: #e86278
 $white: #fff
 $black: #000
+$gray: #818181
+$bg_gray: #f3f3f3
 
 //fonts
 
@@ -38,6 +40,13 @@ $black: #000
 	font-family: "Clear Sans Light", sans-serif
 	font-weight: normal
 
+// titles
+.title-secondary
+	+bold
+	font-size: 18px
+	text-align: center
+	letter-spacing: 3.6px
+	text-transform: uppercase
 //icons
 .icon-arr
 	font-size: 6px
@@ -45,7 +54,9 @@ $black: #000
 .icon-iblock-1
 	font-size: 40px
 	fill: $red
-
+.icon-arrd
+	font-size: 24px
+	fill: #bcbcbc
 //basic styles
 body
 	background: $white
@@ -102,3 +113,9 @@ button
 		//	margin: 0 0 0 6px
 		//	transition: transform 0.25s
 
+// inputs
+%inputs
+	width: 100%
+	outline: 0
+	display: block
+	border: 0
