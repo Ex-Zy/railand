@@ -72,6 +72,14 @@ $bg_gray: #f3f3f3
 	text-align: center
 	letter-spacing: 3.6px
 	text-transform: uppercase
+.title-secondary
+	+bold
+	font-size: 18px
+	color: $black
+	text-align: center
+	letter-spacing: 3.6px
+	text-transform: uppercase
+
 //icons
 .icon-arr
 	font-size: 6px
@@ -146,3 +154,10 @@ img
 	outline: 0
 	display: block
 	border: 0
+.slider
+  opacity: 0
+  visibility: hidden
+  transition: opacity .25s ease, visibility .25s ease
+  &.is-ready
+    opacity: 1
+    visibility: visible
