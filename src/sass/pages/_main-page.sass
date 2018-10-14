@@ -1,0 +1,27 @@
+.main
+	text-align: center
+	color: $white
+	height: 640px
+	background: url(../img/main-section-bg.jpg) no-repeat center
+	background-size: cover
+	&__title
+		text-shadow: 0 1px 0 #000000
+		font-size: 42px
+		line-height: 1.2
+		+bold
+		letter-spacing: 1.05px
+	&__subtitle
+		+regular
+		font-size: 14px
+		line-height: 1.4
+		letter-spacing: 0.35px
+		margin: 16px 0 0
+	&__buttons-wrap
+		margin: 94px 0 0
+		.btn + .btn
+			margin: 0 0 0 20px
+	&__content
+		display: inline-block
+		padding: 90px 0 50px
+	&__btn
+		box-shadow: 0 3px 13px rgba(28, 28, 28, 0.5)
