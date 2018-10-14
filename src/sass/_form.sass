@@ -1,4 +1,23 @@
 .form
+	box-shadow: 0 10px 49px rgba(28, 28, 28, 0.15)
+	border-radius: 3px
+	background-color: rgba(255, 254, 254, 0.48)
+	background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 40%, rgba(255, 255, 255, 0) 100%)
+	color: $gray
+	padding: 30px 20px 20px
+	&__in
+		display: flex
+		justify-content: center
+		margin-top: 27px
+	&__text
+		&:not(:first-child)
+			margin-top: 24px
+	&__col
+		flex: 1
+		&:first-of-type
+			max-width: 340px
+		&:last-of-type
+			margin: 4px 0 0 30px
 	&__row
 		margin-bottom: 9px
 	&__field,
@@ -18,3 +37,4 @@
 		margin-top: 13px
 	&__btn
 		font-size: 12px
+		letter-spacing: 0.6px
