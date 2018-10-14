@@ -6,4 +6,6 @@ PageList:
 - file: example.html
   ready: 20
 - file: faq.html
-  ready: 25
+  ready: 75
+- file: 404.html
+  ready: 75

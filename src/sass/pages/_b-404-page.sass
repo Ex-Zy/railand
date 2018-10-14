@@ -1,0 +1,49 @@
+.b-404
+	background-color: $bg_gray
+	padding: 25px 0 54px 0
+	&__inner
+		max-width: 950px
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 46px
+	&__col
+		&:first-of-type
+			max-width: 310px
+		&:last-of-type
+			padding-top: 15px
+	&__title
+		font-size: 72px
+		color: #bcbcbc
+		+bold
+		span
+			display: block
+			font-size: 170px
+			line-height: 140px
+			text-transform: uppercase
+	&__subtitle
+		font-size: 14px
+		padding: 21px 0 20px 6px
+		color: $black
+	&__form
+		position: relative
+		max-width: 208px
+	&__search
+		+regular
+		font-style: italic
+		color: #d6d6d6
+		letter-spacing: 0.35px
+		height: 33px
+		line-height: 33px
+		padding: 11px 36px 11px 13px
+		@extend %inputs
+	&__btn
+		+hide-text
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAACpklEQVQ4T5WUQYhVVRjHf//77jwekVBq09O559wZRUVIwU2iJCHariwtKHJhCxGXirvauBBcKdimhQvRzQhJhbpRIolZGEUUZgT5mpl77jRTzEIXySgz931yhjeD8xhz5qzu/c53fvzP9/2/I7qWmaUhhP2SDgBvAE3AgAkzG5J0xTl3VVK7+6yeDpRlud3MLgCbuxO7/u+02+1P+vv7f3k6Pg8ry/J9MxsEeoB/zOxzSdeqqmqlaRrzNpjZO8BxYBUwBXzkvb86B5yFjY2N7Wi32993QIONRuNIb2/vf4upm5ycXDE1NXUR2B+BSZLszLLs15irTo3uStoEDDrnDkqKNXrmMrOkLMuvgX3AHefctlhDhRA+BC7HqzUajQ3PUtRNHhkZealWq/0FrDSzfXmeX1NZll+a2Qdm9mme56efU/gF2yGEU8BnwCXv/aGo7G9graStzrnflgPrdP8H4E/v/aYImwFqkl5wzsUOLXm1Wq3eer3+L/DQe/9ihD0G6lVVvTwwMPBgySQghLAWiDe7771fGWGxiOs6Lb69HFhRFG9Jugnc9d5vUVEU5yUdBs56708sBxZC+AI4Kumcc+5YhO2R9G3HgBuzLBtbCjCEsB74Ixpd0nbn3I+zE1AUxXeSdgM/1ev13c1m8+H/AYeHh19N0zS6vinpunMujhmzsPHxcT8zM/MzsDo62sw+zvP898WAo6Oj25IkifOYAe0kSfZmWXZrHhY/yrLcYmY3gDUxCfgGuG5m9yQlkuKgvwu83RHxCGhELZLedM61FjxB0Tc9PT1nJB2cU72Iugq4WKvVTlZVdQV4HRhNkmTXAtjcwaIo1kl6z8x2SuqLcTOLfhpK0/Srvr6+MsY68zkEvBabsShsKd2cy5mYmHhleno6Pl88AQmTCeN33KfdAAAAAElFTkSuQmCC) center no-repeat
+		width: 19px
+		height: 19px
+		position: absolute
+		top: 46%
+		transform: translateY(-50%)
+		right: 9px
