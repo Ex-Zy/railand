@@ -1,3 +1,7 @@
+.inner
+	max-width: 1140px
+	margin: 0 auto
+	padding: 0 15px
 .out
 	min-height: 100vh
 	display: flex
@@ -88,12 +92,65 @@
 		font-family: inherit
 		font-size: inherit
 		line-height: 1.4
-		padding: 5px 8px
+		padding: 5px 2px
 		transition: color 0.25s
+		&:first-of-type
+			padding-left: 0
+		&:last-of-type
+			padding-right: 0
 		&:hover
 			color: lighten($black, 55%)
 .tselect
-	display: none
+	+bold
+	line-height: 1.2
+	color: #000000
+	font-size: 18px
+	text-transform: uppercase
+	letter-spacing: 0.9px
+	height: 100%
+	display: flex
+	align-items: center
+	&.is-active
+		.tselect__list
+			display: block
+	&__current
+		padding: 0 20px 0 0
+		position: relative
+	&__current-link
+		font-family: inherit
+		font-size: inherit
+		line-height: inherit
+		color: inherit
+		transition: opacity 0.25s
+		&:hover
+			opacity: 0.6
+	&__arrow
+		width: 15px
+		height: 10px
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		cursor: pointer
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			+vcenter
+			+arr(9, 4, $black, b)
+	&__list
+		position: absolute
+		top: 100%
+		left: 0
+		background: $white
+		z-index: 10
+		display: none
+	&__item
+		cursor: pointer
+		transition: opacity 0.25s
+		&:hover
+			opacity: 0.6
 .messengers
 	+hide-text
 	display: inline-flex
@@ -121,9 +178,67 @@
 		height: 25px
 		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAACeUlEQVRIS72Wu48SURTGvwGKYXkIBc9ETEwMj0oLOiqBwoLGZkv3P7C002hn6X9g6TY2FBYMJpuQUFBgQijIBsFIASQ8hRkILNecu8zIsjMs7oonIWTmzHy/Oed8984I2BGFQsExm82eA3gGIA7gAQAzgAsAPwCUAHwRRfFzIpH4ZSQl6CWy2eyR1Wp9BeAlgHu7HmSdGwH4oCjK+0wmI29ffw2Sy+WeCIJwCuDRHuLbl5wzxo7T6XR5M3EFks/nnzLGsgCObgFQb5EFQcgkk8mv6gkNsq6gcEeABmKMJdSKOGQ9g2+3bJFR0eeKojymGXGIJElvAby+Q4uMbn2XSqXeCGub/tzTRdfETCYTPB4Plssler3edn4kiuJ9QZKkFwA+/m0VDocDwWAQfr8fFosF3W4XlUpFT+aEIJ8AHO8DITESJXGCLBYLmM1mUDX1eh3NZlNP5pQgdQAPd0HcbjcX9nq9XJBiNBpxgN1u58flchn9fl9P5jtBluut4soFoigiEAjwn9Vq1XLz+ZyLOZ1O2Gw27fzZ2Rmfi05cEIRtJ2KxGG+LIPxZq6vVCoPBAJPJBD6fD/QQ2qKQZRSLRcNm6FZCT0kQcg2JybLMncMY4y3bBJByu91GtVo1gvBKds6E5uFyuXhV1LptACnXajW0Wi0jCJ/JTneReCgUwnA4RCQS0Qa9qVgqlTAej40g3F03rhNqUafTwXQ6RTwe505Tg2ZFQ6d/gzjZa8WTTWnoVBWtFWpbOBzmFqYKqBKDuFzxlLxp71JdRoNXg+wbjUa5IRqNhhHkcu+i7H/ZhQl08PeJWuvB34wq6ODveBV08K+VTZv8q++u37PEJ275bTU+AAAAAElFTkSuQmCC) no-repeat center
 .pselect
-	display: none
+	color: $black
+	+regular
+	font-size: 20px
+	line-height: 1.2
+	letter-spacing: 0.5px
+	margin: 0 20px 0 0
+	position: relative
+	&__current
+		position: relative
+		padding: 0 20px 0 0
+		cursor: pointer
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			+arr(9, 4, $black, b)
+			top: 0
+			bottom: 0
+			right: 5px
+			margin: auto
+	&__list
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		z-index: 10
+	&__item
+		text-transform: uppercase
+		white-space: nowrap
+		cursor: pointer
 .cselect
-	display: none
+	position: relative
+	margin: 0 20px 0 0
+	&.is-active
+		.cselect__list
+			display: block
+	&__current
+		position: relative
+		padding: 0 20px 0 0
+		cursor: pointer
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			+arr(9, 4, $black, b)
+			top: 0
+			bottom: 0
+			right: 5px
+			margin: auto
+	&__list
+		position: absolute
+		top: 100%
+		left: 0
+		display: none
+		padding: 5px 0
+		z-index: 10
+	&__item
+		padding: 5px 0
+		cursor: pointer
+	img
+		display: block
 /* == Header end == */
 
 /* == Footer start == */
@@ -132,7 +247,7 @@
 	margin: auto 0 0
 	&__top-in
 		position: relative
-		padding: 20px 0 10px
+		padding: 25px 15px 10px
 		display: flex
 		&:before
 			content: ''
@@ -145,6 +260,7 @@
 			background: #e5e5e5
 	&__top-left
 		width: calc(100% - 300px)
+		padding: 5px 0 0
 	&__top-right
 		width: 300px
 		display: flex
@@ -178,9 +294,9 @@
 		+regular
 		color: #818181
 		font-size: 16px
-		line-height: 1.6
+		line-height: 1.4
 		position: relative
-		padding: 5px 10px
+		padding: 5px 20px
 		display: inline-block
 		transition: color 0.25s
 		&:hover
@@ -193,13 +309,14 @@
 			border-radius: 50%
 			background: $black
 			position: absolute
-			left: 0
+			left: 10px
 			top: 0
 			bottom: 0
 			margin: auto
 .tel
 	color: $black
 	font-size: 30px
+	line-height: 1.2
 	+bold
 	transition: color 0.25s
 	cursor: pointer
