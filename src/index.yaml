@@ -5,3 +5,5 @@ PageList:
   ready: 1
 - file: example.html
   ready: 20
+- file: faq.html
+  ready: 25
