@@ -1,4 +1,3 @@
-import sayHello from './lib/sayHello.js';
+import 'slick-carousel';
 import './modules/accordion';
-
-sayHello();
+import './modules/sliders';

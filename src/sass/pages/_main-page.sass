@@ -141,3 +141,106 @@
 		.icon
 			margin: 0 0 0 7px
 			transition: transform 0.25s
+.reviews
+	position: relative
+	text-align: center
+	background: $white
+	&__in
+		padding-top: 64px
+		padding-bottom: 60px
+.reviews-slider
+	position: relative
+	text-align: center
+	margin: 40px 0 0
+	&__item
+		max-width: 710px
+	.slick-arrow
+		width: 65px
+		position: absolute
+		bottom: 55px
+		padding: 40px
+		cursor: pointer
+		z-index: 10
+		transition: opacity 0.25s
+		+hide-text
+		&:hover
+			opacity: 0.4
+	.slick-prev
+		left: -10px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			+vcenter
+			width: 65px
+			height: 6px
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAGCAYAAACcqvORAAAAXElEQVQ4T+3UwQmAQAxE0bcWYAN24tkiLETsxRbswYuCtiULgqlhd3MKuf1PZpJ/Oix4cIV78Wv6CAfsGDHhKJ48AGYJMzb0NYFH1iYBLQ5BQv6OXIwrbpw1ReMFHpUKBZoLEZ0AAAAASUVORK5CYII=) no-repeat center
+	.slick-next
+		right: -10px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			+vcenter
+			width: 65px
+			height: 6px
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAGCAYAAACcqvORAAAAUElEQVQ4T+3UwQmAMBQE0ZdOtCc78BQbEOzRFsQiPAqRD6aKn+1gBmaLfJuw4cAb+CWfAzMunFhwh4SWUERHfrAOCdSRw59DthriGCv2Dv4B5IANud7hb+wAAAAASUVORK5CYII=) no-repeat center
+	.slick-dots
+		display: flex
+		justify-content: center
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -30px
+		z-index: 10
+		li
+			width: 14px
+			height: 14px
+			background: #eee
+			border-radius: 50%
+			overflow: hidden
+			margin: 0 11px
+			cursor: pointer
+			transition: background 0.25s
+			&:hover,
+			&.slick-active
+				background: #d0d0d0
+		button
+			+hide-text
+.r-item
+	&__pic
+		position: relative
+		border-radius: 50%
+		overflow: hidden
+		width: 160px
+		height: 160px
+		margin: 0 auto
+		img
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			object-fit: cover
+	&__name
+		color: $black
+		+bold
+		line-height: 1.4
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 1.2px
+		margin: 14px 0 0
+	&__txt
+		color: $gray
+		font-size: 14px
+		+regular-italic
+		line-height: 1.4
+		letter-spacing: 0.35px
+		margin: 14px 0 0
+	&__date
+		color: #181818
+		+regular
+		font-size: 10px
+		line-height: 1.4
+		text-transform: uppercase
+		margin: 18px 0 0
