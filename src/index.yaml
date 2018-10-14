@@ -9,3 +9,5 @@ PageList:
   ready: 75
 - file: 404.html
   ready: 75
+- file: about.html
+  ready: 75
