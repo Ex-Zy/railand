@@ -14,6 +14,7 @@ $bg_gray: #f3f3f3
 +font("Clear Sans Medium Italic", "ClearSans-Mediumitalic")
 +font("Clear Sans Medium", "ClearSans-Medium")
 +font("Clear Sans Regular", "ClearSans-Regular")
++font("Clear Sans Italic", "ClearSans-Italic")
 +font("Clear Sans Thin", "ClearSans-Thin")
 +font("Clear Sans Light", "ClearSans-Light")
 
@@ -33,6 +34,9 @@ $bg_gray: #f3f3f3
 =regular
 	font-family: "Clear Sans Regular", sans-serif
 	font-weight: normal
+=regular-italic
+	font-family: "Clear Sans Italic", sans-serif
+	font-weight: normal
 =thin
 	font-family: "Clear Sans Thin", sans-serif
 	font-weight: normal
@@ -41,7 +45,27 @@ $bg_gray: #f3f3f3
 	font-weight: normal
 
 // titles
-.title-secondary
+.title
+	text-align: center
+	+bold
+	font-size: 18px
+	text-transform: uppercase
+	letter-spacing: 3.6px
+	line-height: 1.2
+	color: $black
+	span
+		position: relative
+		display: inline-block
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			right: 100%
+			top: 50%
+			margin: -1px 20px 0 0
+			width: 75px
+			height: 2px
+			background: $black
 	+bold
 	font-size: 18px
 	color: $black
