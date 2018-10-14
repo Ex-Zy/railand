@@ -55,3 +55,89 @@
 	.icon
 		position: absolute
 		+vcenter
+.news
+	position: relative
+	background: url(../img/news-bg.jpg) no-repeat center
+	background-size: cover
+	height: 763px
+	text-align: center
+	&__in
+		padding-top: 68px
+	&__list
+		display: flex
+		margin: 58px -15px 0
+		text-align: left
+	&__list-item
+		width: 33.3333%
+		flex-grow: 0
+		flex-shrink: 0
+		padding: 0 15px
+	&__btn
+		background: $white
+		color: $black
+		margin: 40px auto 0
+		font-size: 12px
+		min-width: 255px
+		&:hover
+			background: darken($white, 2%)
+			.icon
+				transform: translateX(3px)
+		span
+			display: flex
+			align-items: center
+		.icon
+			margin: 0 0 0 10px
+			transition: transform 0.25s
+.n-item
+	position: relative
+	+regular
+	color: $gray
+	box-shadow: 0 10px 49px rgba(28, 28, 28, 0.15)
+	background: $white
+	&__top
+		height: 180px
+		position: relative
+		img
+			width: 100%
+			height: 100%
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			object-fit: cover
+	&__body
+		padding: 15px 20px
+		min-height: 250px
+		display: flex
+		flex-direction: column
+	&__data
+		text-transform: uppercase
+		font-size: 10px
+		line-height: 1.2
+		display: block
+	&__title
+		+bold
+		font-size: 18px
+		line-height: 1.2
+		color: $black
+		margin: 14px 0 0
+	&__txt
+		font-size: 13px
+		line-height: 1.6
+		margin: 15px 0 0
+	&__link
+		+bold
+		font-size: 12px
+		letter-spacing: 0.6px
+		color: $black
+		padding: 10px 0
+		transition: opacity 0.25s
+		text-transform: uppercase
+		display: inline-block
+		&:hover
+			opacity: 0.6
+			.icon
+				transform: translateX(3px)
+		.icon
+			margin: 0 0 0 7px
+			transition: transform 0.25s

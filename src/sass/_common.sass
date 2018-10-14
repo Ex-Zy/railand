@@ -41,7 +41,27 @@ $bg_gray: #f3f3f3
 	font-weight: normal
 
 // titles
-.title-secondary
+.title
+	text-align: center
+	+bold
+	font-size: 18px
+	text-transform: uppercase
+	letter-spacing: 3.6px
+	line-height: 1.2
+	color: $black
+	span
+		position: relative
+		display: inline-block
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			right: 100%
+			top: 50%
+			margin: -1px 20px 0 0
+			width: 75px
+			height: 2px
+			background: $black
 	+bold
 	font-size: 18px
 	text-align: center
