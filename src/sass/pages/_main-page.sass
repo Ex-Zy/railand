@@ -244,3 +244,76 @@
 		line-height: 1.4
 		text-transform: uppercase
 		margin: 18px 0 0
+.apartments
+	position: relative
+	background: #f4f4f4
+	&__in
+		padding-top: 67px
+		padding-bottom: 67px
+	&__btn
+		background: $green
+		margin: 90px 0 0 190px
+		font-size: 12px
+		min-width: 255px
+		&:hover
+			background: darken($green, 2%)
+			.icon
+				transform: translateX(3px)
+		span
+			display: flex
+			align-items: center
+		.icon
+			margin: 0 0 0 10px
+			transition: transform 0.25s
+			fill: $white
+.alist
+	margin: -42px -30px 0
+	display: flex
+	flex-wrap: wrap
+	&__item
+		width: 50%
+		padding: 0 30px
+		margin: 108px 0 0
+		&:nth-of-type(even)
+			position: relative
+			top: 60px
+.aitem
+	display: flex
+	&__pic
+		width: 255px
+		height: 300px
+		border: 8px solid $white
+		position: relative
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__content
+		padding: 30px 0 0 30px
+	&__title
+		margin: 0 0 0 -95px
+		background: $white
+		min-height: 120px
+		box-shadow: 0 10px 49px rgba(28, 28, 28, 0.15)
+		padding: 18px
+		+bold
+		font-size: 18px
+		line-height: 1.6
+		color: $black
+		position: relative
+		z-index: 1
+		width: 255px
+	&__list
+		+regular
+		font-size: 14px
+		line-height: 1.4
+		color: $gray
+		margin: 40px 0 0
+	&__price
+		text-transform: uppercase
+		font-size: 28px
+		margin: 14px 0 0
+		+bold

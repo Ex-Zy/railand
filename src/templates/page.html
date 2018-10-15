@@ -47,6 +47,40 @@ title: Аренда и продажа недвижимости на Пхукет
   </div>
   <!-- END icons -->
 
+  <!-- BEGIN apartments -->
+  <div class="apartments">
+    <div class="apartments__in inner">
+      <h2 class="title title__left"><span>Топ Объектов на </span></h2>
+      <ul class="alist">
+        {% for i in range(0, 6) -%}
+        <li class="alist__item">
+          <div class="aitem">
+            <div class="aitem__pic">
+              <img src="https://via.placeholder.com/255x300" width="255" height="300" alt="">
+            </div>
+            <div class="aitem__content">
+              <div class="aitem__title">
+                ВИЛЛА LYDIA. Удобные апартаменты с видом
+                на закат
+              </div>
+              <ul class="aitem__list">
+                <li class="aitem__list-item">Жилая площадь: от 200 м2</li>
+                <li class="aitem__list-item">Спален: 2-3</li>
+                <li class="aitem__list-item">До пляжа: 3 км</li></li>
+              </ul>
+              <div class="aitem__price">$ 95 000</div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <button type="button" class="apartments__btn btn">
+        <span>Показать весь список {{mixins.icon('arr')}}</span>
+      </button>
+    </div>
+  </div>
+  <!-- END apartments -->
+
   <!-- BEGIN reviews -->
   <div class="reviews">
     <div class="reviews__in inner">
