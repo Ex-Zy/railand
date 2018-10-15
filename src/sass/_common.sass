@@ -149,3 +149,56 @@ img
 	outline: 0
 	display: block
 	border: 0
+
+// checkbox
+.checkbox
+	&__list
+		display: flex
+		flex-direction: column
+		padding-left: 5px	
+	&__item
+		position: relative
+		&:not(:last-child)
+			margin-bottom: 10px	
+	&__field
+		position: absolute
+		z-index: -1
+		opacity: 0
+		height: 0
+		&:checked + label:after
+			content: ""
+			z-index: 3
+			top: 39%
+			left: 2%
+			position: absolute
+			-ms-transform: translate(-50%,-50%) rotate(220deg)
+			transform: translate(-50%,-50%) rotate(220deg)
+			width: 8px
+			height: 8px
+			background: 0 0
+			border-top: 2px solid #000
+			border-left: 2px solid #000
+	&__label
+		display: flex
+		align-items: center
+		cursor: pointer
+		&:before
+			content: ""
+			-webkit-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			overflow: hidden
+			-webkit-box-shadow: none
+			box-shadow: none
+			background: 0 0
+			width: 13px
+			height: 13px
+			border-radius: 3px
+			border: 1px solid #e4e4e4
+			background-color: #f3f3f3
+	&__title
+		font-size: 14px
+		letter-spacing: 0.35px
+		padding-left: 13px	
+		color: $black
