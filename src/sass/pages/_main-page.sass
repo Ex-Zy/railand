@@ -250,6 +250,7 @@
 	&__in
 		padding-top: 67px
 		padding-bottom: 67px
+		position: relative
 	&__btn
 		background: $green
 		margin: 90px 0 0 190px
@@ -266,6 +267,10 @@
 			margin: 0 0 0 10px
 			transition: transform 0.25s
 			fill: $white
+	&__tab-links
+		position: absolute
+		right: 205px
+		top: 56px
 .alist
 	margin: -42px -30px 0
 	display: flex
@@ -317,3 +322,41 @@
 		font-size: 28px
 		margin: 14px 0 0
 		+bold
+.tab-links
+	display: flex
+	width: 350px
+	&__item
+		width: 50%
+		+bold
+		font-size: 14px
+		text-transform: uppercase
+		line-height: 1.4
+		color: $black
+		padding: 10px 15px
+		margin: 0 15px
+		position: relative
+		display: block
+		transition: color 0.25s
+		&:first-of-type
+			margin-left: 0
+		&:last-of-type
+			margin-right: 0
+		&:hover
+			color: lighten($black, 50%)
+			&:before
+				background: lighten($black, 50%)
+		&.is-active
+			color: $red
+			&:before
+				background: $red
+				transition: background 0.25s
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 2px
+			background: $black
+			transition: background 0.25s
