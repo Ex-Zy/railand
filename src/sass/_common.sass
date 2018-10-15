@@ -85,6 +85,9 @@ $bg_gray: #f3f3f3
 .icon-arrd
 	font-size: 24px
 	fill: #bcbcbc
+.icon-cancel
+	font-size: 16px
+	+tr(opacity .3s ease)
 //basic styles
 body
 	background: $white
@@ -142,7 +145,17 @@ img
 		//.icon
 		//	margin: 0 0 0 6px
 		//	transition: transform 0.25s
-
+.btn-close
+	background-color: $gray2
+	border-radius: 50%
+	width: 31px	
+	height: 31px	
+	display: flex
+	display: block	
+	align-items: center
+	&:hover
+		.icon-cancel
+			opacity: 0.7
 // inputs
 %inputs
 	width: 100%
@@ -206,14 +219,13 @@ img
 // range-slider
 .range-slider
 	padding-left: 10px
-	margin: 33px 0
+	width: 90%	
+	margin: 33px 0 53px 0
 	&__title,
 	&__inputs
 		font-size: 14px
 		color: $gray
 		letter-spacing: 0.35px
-	&__title
-		margin-bottom: 11px	
 	&__controls
 		display: flex
 		justify-content: space-between
@@ -229,3 +241,91 @@ img
 		padding: 7px 11px	
 		border-radius: 3px
 		background-color: #f3f3f3
+
+// pagination
+.catalog-page
+	display: flex
+	font-size: 14px
+	text-transform: uppercase
+	justify-content: space-between
+	+bold
+	&__navigation
+		display: flex
+		justify-content: center
+		align-items: center
+		&:last-of-type
+			.catalog-page__first,
+			.catalog-page__link,
+				border-left-width: 1px
+				border-left-style: solid
+				border-color: $black
+			.catalog-page__first
+				border-left: none
+	&__title
+		letter-spacing: 0.7px
+	&__current
+		color: $gray2
+	&__link
+		color: $black
+		+tr(color .25s ease)
+		line-height: 13px
+		&:hover
+			color: $gray2
+	&__first,
+	&__link
+		text-decoration: none
+		padding: 0 8px
+// catalog-list
+.catalog-list
+	display: flex
+	justify-content: center
+	align-items: center
+	&__item
+		padding: 0 15px
+		flex: 1
+		display: flex
+	&__link
+		color: $black
+		font-size: 14px
+		text-transform: uppercase
+		letter-spacing: 1.4px
+		border-bottom: 2px solid $black	
+		+bold
+		transition: border-color .25s ease, color .25s ease
+		padding: 10px 45px	
+		&:hover,
+		&.is-active
+			color: #fe405e
+			border-color: #fe405e
+// select
+
+.select
+	position: relative
+	border: 0
+	min-width: 237px
+	cursor: pointer
+	border-radius: 3px
+	background-color: #f3f3f3
+	letter-spacing: 0.35px
+	font-size: 14px
+	height: 33px	
+	line-height: 33px
+	padding: 4px 10px
+	color: #0d0113
+	display: flex
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 4px 4.5px 0
+		border-color: #000 transparent transparent
+		bottom: 0
+		right: 5px
+		margin: auto	
+	&__wh
+		background-color: $white
+		min-width: 208px
+		margin-bottom: 0	

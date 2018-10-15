@@ -53,7 +53,7 @@ title: Аренда и продажа недвижимости на Пхукет
 			<aside class="cards__aside aside">
 				<div class="aside__top">	
 					<h4 class="aside__top-title">Сортировка:</h4>
-					<select class="aside__sel aside__sel-wh">
+					<select class="select select__wh">
 						<option value="" selected="selected">
 							По популярности
 						</option>
@@ -68,90 +68,111 @@ title: Аренда и продажа недвижимости на Пхукет
 					</h3>
 
 					<div class="aside__content">	
-						
-						<div class="aside__col">	
-							<select class="aside__sel">
-								<option value="" selected="selected">
-									Расположение
-								</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
-							</select>
+						<form>
+							<div class="aside__col">	
+								<select class="select">
+									<option value="" selected="selected">
+										Расположение
+									</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+								</select>
+							</div>
+
+							<div class="aside__col">	
+								<select class="select">
+									<option value="" selected="selected">
+										Количество спален
+									</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+								</select>
+							</div>
+							<div class="aside__col">	
+								<ul class="checkbox__list">	
+									<li class="checkbox__item">	
+										<input name="" id="villa" type="checkbox" class="checkbox__field">
+										<label for="villa" class="checkbox__label">
+											<span class="checkbox__title">
+												Вилла
+											</span>
+										</label>
+									</li>
+									<li class="checkbox__item">	
+										<input name="" id="appartament" type="checkbox" class="checkbox__field">
+										<label for="appartament" class="checkbox__label">
+											<span class="checkbox__title">
+												Аппартамены
+											</span>
+										</label>
+									</li>
+									<li class="checkbox__item">	
+										<input name="" id="hous" type="checkbox" class="checkbox__field">
+										<label for="hous" class="checkbox__label">
+											<span class="checkbox__title">
+												Таунхаус
+											</span>
+										</label>
+									</li>
+									<li class="checkbox__item">	
+										<input name="" id="as" type="checkbox" class="checkbox__field">
+										<label for="as" class="checkbox__label">
+											<span class="checkbox__title">
+												Земельный участок
+											</span>
+										</label>
+									</li>
+								</ul>
+
+
+							</div>
+
+							<div class="aside__col">	
+								<select class="select">
+									<option value="" selected="selected">
+										Статус объекта
+									</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+								</select>
+							</div>
+
+							<div class="aside__col">	
+								<select class="select">
+									<option value="" selected="selected">
+										Цель
+									</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+								</select>
+							</div>
+							<div class="range-slider">  
+								<h5 class="range-slider__title"> 
+									Стоимость:
+								</h5>
+								{% include "partials/components/_range.html" %}
+							</div>
+							<div class="aside__btns">	
+								<button type="submit" class="btn"> 
+									<span> Искать</span>	
+								</button>
+								<button type="button" class="btn-close js-close">
+								{{mixins.icon('cancel')}}
+							</button>
+							</div>
+						</form>
+					</div>
+					<div class="aside__map">	
+						<h5>	
+							Объекты на карте:
+						</h5>
+						<div class="aside__pic">	
+							<img src="img/card/map.jpg" alt="">
 						</div>
-
-						<div class="aside__col">	
-							<select class="aside__sel">
-								<option value="" selected="selected">
-									Количество спален
-								</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
-							</select>
-						</div>
-						<div class="aside__col">	
-							<ul class="checkbox__list">	
-								<li class="checkbox__item">	
-									<input name="" id="villa" type="checkbox" class="checkbox__field">
-									<label for="villa" class="checkbox__label">
-										<span class="checkbox__title">
-											Вилла
-										</span>
-									</label>
-								</li>
-								<li class="checkbox__item">	
-									<input name="" id="appartament" type="checkbox" class="checkbox__field">
-									<label for="appartament" class="checkbox__label">
-										<span class="checkbox__title">
-											Аппартамены
-										</span>
-									</label>
-								</li>
-								<li class="checkbox__item">	
-									<input name="" id="hous" type="checkbox" class="checkbox__field">
-									<label for="hous" class="checkbox__label">
-										<span class="checkbox__title">
-											Таунхаус
-										</span>
-									</label>
-								</li>
-								<li class="checkbox__item">	
-									<input name="" id="as" type="checkbox" class="checkbox__field">
-									<label for="as" class="checkbox__label">
-										<span class="checkbox__title">
-											Земельный участок
-										</span>
-									</label>
-								</li>
-							</ul>
-
-
-						</div>
-
-						<div class="aside__col">	
-							<select class="aside__sel">
-								<option value="" selected="selected">
-									Статус объекта
-								</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
-							</select>
-						</div>
-
-						<div class="aside__col">	
-							<select class="aside__sel">
-								<option value="" selected="selected">
-									Цель
-								</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
-							</select>
-						</div>
-							{% include "partials/components/_range.html" %}
-
 					</div>
 				</div>
 			</aside>
