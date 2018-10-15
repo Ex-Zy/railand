@@ -1,0 +1,59 @@
+---
+title: Аренда и продажа недвижимости на Пхукете
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+
+<!-- BEGIN 404 -->
+<div class="b-404">
+  <div class="b-404__inner inner">
+    <div class="b-404__header">
+      <div class="b-404__col">
+        <div class="b-404__title">
+          Oops..
+          <span>
+           404
+         </span>
+       </div>
+       <div class="b-404__subtitle">
+        Не нашли то, что искали? <br/>
+        Воспользуйтесь нашим удобным поиском 
+      </div>
+       {% include "partials/components/_search.html" %}
+   </div>
+   <div class="b-404__col">
+    <img src="img/error-photo.png" alt=""/>
+  </div>
+</div>
+
+<div class="b-404__footer form">
+  <h2 class="title-secondary">
+    Задайте нам вопрос
+  </h2>
+  <div class="form__in">
+    <div class="form__col">
+      <p class="form__text">
+        Если вы хотите поделиться с нами опытом использования сервиса Райленд или задать вопрос, связанный с сайтом momondo, пожалуйста, заполните эту форму обратной связи.
+      </p>
+      <p class="form__text">
+        Работаем с 2012 года. Ответим на любые вопросы по отдыху и недвижимости на Пхукете, Самуи и Бали
+      </p>
+    </div>
+    <div class="form__col">
+      <!-- BEGIN form -->
+      <form action="">
+        {% include "partials/components/_form.html" %}
+      </form>
+      <!-- END form -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- END 404 -->
+
+
+{% endblock %}

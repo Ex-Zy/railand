@@ -4,8 +4,8 @@ $red: #e86278
 $white: #fff
 $black: #000
 $gray: #818181
+$gray2: #bdbdbd
 $bg_gray: #f3f3f3
-
 //fonts
 
 /*=== import ===*/
@@ -45,7 +45,7 @@ $bg_gray: #f3f3f3
 	font-weight: normal
 
 // titles
-.title
+.title-primary
 	text-align: center
 	+bold
 	font-size: 18px
@@ -53,6 +53,7 @@ $bg_gray: #f3f3f3
 	letter-spacing: 3.6px
 	line-height: 1.2
 	color: $black
+	width: 100%
 	span
 		position: relative
 		display: inline-block
@@ -66,14 +67,16 @@ $bg_gray: #f3f3f3
 			width: 75px
 			height: 2px
 			background: $black
+	&__left
+		text-align: right
+		padding: 0 588px 0 0px
+.title-secondary
 	+bold
 	font-size: 18px
 	text-align: center
 	letter-spacing: 3.6px
 	text-transform: uppercase
-	&__left
-		text-align: left
-		padding: 0 0 0 310px
+	color: $black
 //icons
 .icon-arr
 	font-size: 6px
@@ -84,6 +87,9 @@ $bg_gray: #f3f3f3
 .icon-arrd
 	font-size: 24px
 	fill: #bcbcbc
+.icon-cancel
+	font-size: 16px
+	+tr(opacity .3s ease)
 //basic styles
 body
 	background: $white
@@ -100,7 +106,9 @@ button
 	background: none
 	outline: none
 	border: 0
-
+img
+	max-width: 100%
+	max-height: 100%
 //buttons
 .btn
 	display: inline-flex
@@ -133,16 +141,245 @@ button
 		color: $black
 		&:hover
 			background: darken($white, 5%)
-		//	.icon
-		//		transform: translateX(3px)
-        //
-		//.icon
-		//	margin: 0 0 0 6px
-		//	transition: transform 0.25s
-
+.btn-close
+	background-color: $gray2
+	border-radius: 50%
+	width: 31px
+	height: 31px
+	display: flex
+	align-items: center
+	justify-content: center
+	&:hover
+		.icon-cancel
+			opacity: 0.7
 // inputs
 %inputs
 	width: 100%
 	outline: 0
 	display: block
 	border: 0
+.input-field
+	position: relative
+	&__el
+		height: 32px
+		border-radius: 3px
+		background: #f3f3f3
+		padding: 4px 10px
+		font-size: 14px
+		+regular
+		color: $gray
+		transition: background 0.25s
+		@extend %inputs
+		+placeholder
+			color: $gray
+		&:focus
+			background: darken(#f3f3f3, 2%)
+//textarea
+.input-area
+	position: relative
+	width: 100%
+	&__el
+		resize: none
+		height: 66px
+		background: #f3f3f3
+		padding: 8px 10px
+		font-size: 14px
+		+regular
+		color: $gray
+		transition: background 0.25s
+		@extend %inputs
+		+placeholder
+			color: $gray
+		&:focus
+			background: darken(#f3f3f3, 2%)
+// checkbox
+.checkbox
+	display: inline-flex
+	position: relative
+	&__list
+		display: flex
+		flex-direction: column
+		padding-left: 5px
+	&__item
+		position: relative
+		display: flex
+		&:not(:last-child)
+			margin-bottom: 10px
+	&__field
+		position: absolute
+		z-index: -1
+		opacity: 0
+		height: 0
+		&:checked + label:after
+			content: ""
+			z-index: 3
+			top: 8px
+			left: 6px
+			position: absolute
+			transform: translate(-50%,-50%) rotate(220deg)
+			width: 8px
+			height: 8px
+			background: 0 0
+			border-top: 2px solid #000
+			border-left: 2px solid #000
+	&__label
+		display: flex
+		align-items: center
+		cursor: pointer
+		position: relative
+		&:before
+			content: ""
+			user-select: none
+			overflow: hidden
+			box-shadow: none
+			background: 0 0
+			width: 13px
+			height: 13px
+			border-radius: 3px
+			border: 1px solid #e4e4e4
+			background-color: #f3f3f3
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto
+	&__title
+		font-size: 14px
+		letter-spacing: 0.35px
+		padding-left: 26px
+		color: $black
+	&_right
+		.checkbox__title
+			padding: 0 26px 0 0
+		.checkbox__label
+			&:before
+				left: auto
+				right: 0
+		.checkbox__field
+			&:checked + label:after
+				left: auto
+				right: -2px
+// range-slider
+.range-slider
+	padding-left: 10px
+	width: 90%
+	margin: 33px 0 53px 0
+	&__title,
+	&__inputs
+		font-size: 14px
+		color: $gray
+		letter-spacing: 0.35px
+	&__controls
+		display: flex
+		justify-content: space-between
+		width: 100%
+		margin: 0 -14px	15px
+	&__col
+		padding: 0 14px
+	&__input
+		width: 100%
+		display: block
+		min-width: 100px
+		color: $gray
+		padding: 7px 11px
+		border-radius: 3px
+		background: #f3f3f3
+		transition: background 0.25s
+		@extend %inputs
+		+placeholder
+			color: $gray
+		&:focus
+			background: darken(#f3f3f3, 2%)
+// checkbox
+
+// pagination
+.catalog-page
+	display: flex
+	font-size: 14px
+	text-transform: uppercase
+	justify-content: space-between
+	+regular
+	&__navigation
+		display: flex
+		justify-content: center
+		align-items: center
+		&:last-of-type
+			.catalog-page__first,
+			.catalog-page__link
+				border-left-width: 1px
+				border-left-style: solid
+				border-color: $black
+			.catalog-page__first
+				border-left: none
+	&__title
+		letter-spacing: 0.7px
+	&__current
+		color: $gray2
+	&__link
+		color: $black
+		+tr(color .25s ease)
+		line-height: 13px
+		&:hover
+			color: $gray2
+	&__first,
+	&__link
+		text-decoration: none
+		padding: 0 8px
+// catalog-list
+.catalog-list
+	display: flex
+	justify-content: center
+	align-items: center
+	&__item
+		padding: 0 15px
+		flex: 1
+		display: flex
+	&__link
+		color: $black
+		font-size: 14px
+		text-transform: uppercase
+		letter-spacing: 1.4px
+		border-bottom: 2px solid $black
+		+bold
+		transition: color 0.25s, border-color 0.25s
+		padding: 10px 45px
+		&:hover
+			color: lighten($black, 50%)
+			border-color: lighten($black, 50%)
+		&.is-active
+			color: $red
+			border-color: $red
+// select
+.select-l
+	position: relative
+	display: flex
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 10px
+		bottom: 0
+		margin: auto
+		pointer-events: none
+		+arr(9, 4, $black, b)
+	&__el
+		cursor: pointer
+		border-radius: 3px
+		background-color: #f3f3f3
+		letter-spacing: 0.35px
+		font-size: 14px
+		height: 32px
+		padding: 4px 10px
+		color: #0d0113
+		appearance: none
+		border: 0
+		display: block
+		width: 100%
+		+regular
+	&_wh
+		width: 208px
+		margin-bottom: 0
+		.select-l__el
+			background-color: $white

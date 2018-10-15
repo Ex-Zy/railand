@@ -50,7 +50,7 @@ title: Аренда и продажа недвижимости на Пхукет
   <!-- BEGIN apartments -->
   <div class="apartments">
     <div class="apartments__in inner">
-      <h2 class="title title__left"><span>Топ Объектов на </span></h2>
+      <h2 class="title-primary title-primary__left"><span>Топ Объектов на </span></h2>
       <div class="apartments__tab-links tab-links">
         <button type="button" class="tab-links__item is-active"><span>продажу</span></button>
         <button type="button" class="tab-links__item"><span>Аренду</span></button>
@@ -85,10 +85,130 @@ title: Аренда и продажа недвижимости на Пхукет
   </div>
   <!-- END apartments -->
 
+  <!-- BEGIN order -->
+  <div class="order">
+    <div class="order__in inner">
+      <h2 class="title-primary"><span>Заявка на подбор недвижимости</span></h2>
+      <div class="order-form">
+        <div class="order-form__top">
+          <div class="order-tabs">
+            <button type="button" class="order-tabs__btn is-active"><span>Покупка</span></button>
+            <button type="button" class="order-tabs__btn"><span>Аренда</span></button>
+          </div>
+        </div>
+        <div class="order-form__body">
+          <div class="order-form__left">
+            <div class="order-options">
+              <div class="order-options__row">
+                <div class="select-l">
+                  <select class="select-l__el">
+                    <option value selected>Расположение</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                  </select>
+                </div>
+                <div class="select-l">
+                  <select class="select-l__el">
+                    <option value selected>Количество спален</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="order-options__row order-options__row-justify">
+                <div class="checkbox checkbox_right">
+                  <input name="" id="apart" type="checkbox" class="checkbox__field">
+                  <label for="apart" class="checkbox__label"><span class="checkbox__title">Апартаменты</span></label>
+                </div>
+                <div class="checkbox checkbox_right">
+                  <input name="" id="villa" type="checkbox" class="checkbox__field">
+                  <label for="villa" class="checkbox__label"><span class="checkbox__title">Вилла</span></label>
+                </div>
+                <div class="checkbox checkbox_right">
+                  <input name="" id="house" type="checkbox" class="checkbox__field">
+                  <label for="house" class="checkbox__label"><span class="checkbox__title">Дом</span></label>
+                </div>
+                <div class="checkbox checkbox_right">
+                  <input name="" id="region" type="checkbox" class="checkbox__field">
+                  <label for="region" class="checkbox__label"><span class="checkbox__title">Земельный участок</span></label>
+                </div>
+              </div>
+              <div class="order-options__row">
+                <div class="select-l">
+                  <select class="select-l__el">
+                    <option value selected>Цель</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                  </select>
+                </div>
+                <div class="select-l">
+                  <select class="select-l__el">
+                    <option value selected>Статус объекта</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="order-options__row">
+                <div class="order-options__range">
+                  <div class="range-slider">
+                    <h5 class="range-slider__title">
+                      Стоимость:
+                    </h5>
+                    {% include "partials/components/_range.html" %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-send">
+              <div class="order-send__row">
+                <div class="input-field"><input type="text" class="input-field__el" placeholder="Имя*"></div>
+                <div class="input-field"><input type="email" class="input-field__el" placeholder="E-mail*"></div>
+              </div>
+              <div class="order-send__row">
+                <div class="input-area">
+                  <textarea class="input-area__el" placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+              <div class="order-send__bottom">
+                <div class="order-send__bottom-in">
+                  <button type="submit" class="btn">
+                    <span> Искать</span>
+                  </button>
+                  <button type="button" class="btn-close js-close">
+                    {{mixins.icon('cancel')}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-form__right">
+            <div class="order-form__title">
+              <span>48 ЧАСОВ</span> <br/> НА ИЗУЧЕНИЕ ВСЕГО <br/> КАТАЛОГА
+            </div>
+            <div class="order-form__txt">
+              <p>
+                Потратьте минуту и опишите критерии "той самой" идеальной виллы, которую Вы хотите арендовать или купить. В течении 20 минут с Вами свяжется менеджер и приступит к подбору вариантов. Для этого заполните поля формы и укажите свои предпочтения.
+              </p>
+              <p>
+                В нашей базе недвижимости 2000+ вилл. Мы обязательно найдем подходящий вариант. Достаточно заполнить форму, и мы приступим к поиску!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END order -->
+
   <!-- BEGIN reviews -->
   <div class="reviews">
     <div class="reviews__in inner">
-      <h2 class="title"><span>честные отзывы о нас </span></h2>
+      <h2 class="title-primary"><span>честные отзывы о нас </span></h2>
       <div class="reviews-slider js-reviews-slider">
         {% for i in range(0, 5) -%}
         <div class="reviews-slider__item r-item">
@@ -111,7 +231,7 @@ title: Аренда и продажа недвижимости на Пхукет
   <!-- BEGIN news -->
   <div class="news">
     <div class="news__in inner">
-      <h2 class="title"><span>Лучшее на Пхукете: Мероприятия</span></h2>
+      <h2 class="title-primary"><span>Лучшее на Пхукете: Мероприятия</span></h2>
       <ul class="news__list">
         {% set newsList = [
           {
