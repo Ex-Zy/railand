@@ -12,6 +12,7 @@ initSlider(reviewsSlider, {
   dots: true
 });
 
+
 // card sliders
 let numSlick = 0;
 $('.card__slider').each( function() {
@@ -23,4 +24,5 @@ $('.card__slider').each( function() {
     autoPlay: true,
     autoplaySpeed: 4000
   });
+  
 });
