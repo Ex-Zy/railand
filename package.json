@@ -44,10 +44,10 @@
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.1.1",
     "gulp-postcss": "^6.2.0",
     "gulp-prettify": "^0.4.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.5",
@@ -55,7 +55,7 @@
     "gulp.spritesmith": "^6.0.0",
     "htmlhint": "^0.9.13",
     "husky": "^0.13.2",
-    "jquery": "^3.1.1",
+    "jquery": "^3.3.1",
     "lint-staged": "^4.0.2",
     "lodash": "^4.3.0",
     "lost": "^7.1.0",
@@ -69,6 +69,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
+    "ion-rangeslider": "^2.2.0",
     "slick-carousel": "^1.8.1"
   }
 }
