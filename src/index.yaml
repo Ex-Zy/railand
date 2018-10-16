@@ -13,3 +13,5 @@ PageList:
   ready: 75
 - file: sale.html
   ready: 75
+- file: cooperation.html
+  ready: 75
