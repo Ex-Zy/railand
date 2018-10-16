@@ -384,3 +384,21 @@ img
 		margin-bottom: 0
 		.select-l__el
 			background-color: $white
+
+// tags
+.tags
+	font-size: 18px
+	+regular
+	display: flex
+	align-items: center
+	line-height: 30px	
+	text-transform: uppercase	
+	&__txt
+		margin: 0 5px 0 0
+	&__item
+		padding: 5px 3px	
+		color: #fe3e5d
+		cursor: pointer
+		+tr(opacity .25s ease)
+		&:hover
+			opacity: 0.5

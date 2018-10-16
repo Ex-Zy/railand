@@ -17,5 +17,7 @@ PageList:
   ready: 75
 - file: journal.html
   ready: 100
+- file: subjects.html
+  ready: 20
 - file: contact.html
   ready: 20
