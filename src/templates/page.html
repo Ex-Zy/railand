@@ -256,25 +256,27 @@ title: Аренда и продажа недвижимости на Пхукет
               </div>
             </div>
             <div class="order-send">
-              <div class="order-send__row">
-                <div class="input-field"><input type="text" class="input-field__el" placeholder="Имя*"></div>
-                <div class="input-field"><input type="email" class="input-field__el" placeholder="E-mail*"></div>
-              </div>
-              <div class="order-send__row">
-                <div class="input-area">
-                  <textarea class="input-area__el" placeholder="Комментарий"></textarea>
+              <form>
+                <div class="order-send__row">
+                  <div class="input-field"><input type="text" class="input-field__el" placeholder="Имя*"></div>
+                  <div class="input-field"><input type="email" class="input-field__el" placeholder="E-mail*"></div>
                 </div>
-              </div>
-              <div class="order-send__bottom">
-                <div class="order-send__bottom-in">
-                  <button type="submit" class="btn">
-                    <span> Искать</span>
-                  </button>
-                  <button type="button" class="btn-close js-close">
-                    {{mixins.icon('cancel')}}
-                  </button>
+                <div class="order-send__row">
+                  <div class="input-area">
+                    <textarea class="input-area__el" placeholder="Комментарий"></textarea>
+                  </div>
                 </div>
-              </div>
+                <div class="order-send__bottom">
+                  <div class="order-send__bottom-in">
+                    <button type="submit" class="btn">
+                      <span> Искать</span>
+                    </button>
+                    <button type="button" class="btn-close js-close">
+                      {{mixins.icon('cancel')}}
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <div class="order-form__right">
