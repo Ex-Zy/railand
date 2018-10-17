@@ -57,8 +57,11 @@
 	&__list
 		display: flex
 	&__aside
-		flex: 0 1 348px
-		padding-right: 36px
+		flex-shrink: 0
+		flex-grow: 0
+		max-width: 348px	
+		// flex: 0 1 348px
+		margin-right: 36px
 	&__header
 		margin: 17px 0 50px
 		position: relative
@@ -66,22 +69,30 @@
 		flex-grow: 1
 		align-items: flex-start
 	&__body
-		width: 70%	
+		width: 66%	
 	&__list
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: center
 		padding-top: 10px
 		padding-bottom: 7px
 		display: none
 		&.is-active
 			display: flex
 	&__item
+		width: 48%	
 		max-width: 350px
+		&:not(:first-child)
+			margin-left: 3%	
+		flex-grow: 0
+		flex-shrink: 1
 		padding: 12px 0
 	&__tab-links
 		position: absolute
 		top: -10px
 		right: 200px
+.cards__list-col3
+	.cards__item
+		width: 31.33%
 .card
 	&__top
 		position: relative
