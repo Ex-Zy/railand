@@ -21,3 +21,5 @@ PageList:
   ready: 20
 - file: contact.html
   ready: 20
+- file: personal-area.html
+  ready: 20
