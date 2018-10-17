@@ -27,41 +27,68 @@ title: Аренда и продажа недвижимости на Пхукет
 <section class="cards">
 	<div class="cards__in inner">
 		<div class="cards__header">
-      <h2 class="title-primary title-primary__left"><span>Топ Объектов на </span></h2>
+			<h2 class="title-primary title-primary__left">
+				<span>
+					каталог Объектов на 
+				</span>
+			</h2>
 			<!--<ul class="catalog-list">-->
 				<!--<li class="catalog-list__item">-->
 					<!--<a href=""  class="catalog-list__link js-tab is-active" data-tab="0">-->
 						<!--продажу-->
-					<!--</a>-->
-				<!--</li>-->
-				<!--<li class="catalog-list__item">-->
-					<!--<a href=""  class="catalog-list__link js-tab" data-tab="1">-->
-						<!--Аренду-->
-					<!--</a>-->
-				<!--</li>-->
-			<!--</ul>-->
-      <div class="cards__tab-links tab-links">
-        <button type="button" class="tab-links__item js-tab is-active" data-tab="0"><span>продажу</span></button>
-        <button type="button" class="tab-links__item js-tab" data-tab="1"><span>Аренду</span></button>
-      </div>
+						<!--</a>-->
+						<!--</li>-->
+						<!--<li class="catalog-list__item">-->
+							<!--<a href=""  class="catalog-list__link js-tab" data-tab="1">-->
+								<!--Аренду-->
+								<!--</a>-->
+								<!--</li>-->
+								<!--</ul>-->
+			<div class="cards__tab-links tab-links">
+				<button type="button" class="tab-links__item js-tab is-active" data-tab="0"><span>продажу</span></button>
+				<button type="button" class="tab-links__item js-tab" data-tab="1"><span>Аренду</span></button>
+			</div>
 		</div>
+
+		<div class="cards-sort">	
+			<div class="cards-sort__l">	
+				<!-- <h4 class="cards-sort__title">Сортировка:</h4> -->
+				<div class="select-l select-l_wh">
+					<select class="select-l__el">
+						<option value="" selected="selected">
+							По популярности
+						</option>
+						<option value="1">Option 1</option>
+						<option value="2">Option 2</option>
+						<option value="3">Option 3</option>
+					</select>
+				</div>
+			</div>
+			<div class="cards-sort__r">	
+				<div class="objects">
+					<div class="objects__title">
+						Тип недвижимости :
+					</div>
+					<div class="objects__col">
+						<span class="objects__link objects__current">
+							Вся недвижимость
+						</span>
+						<a href="" class="objects__link is">Вилла</a>
+						<a href="" class="objects__link is-active">Аппартаменты</a>
+						<a href="" class="objects__link">Таунхаус</a>
+						<a href="" class="objects__link">Комплексы</a>
+					</div>
+				</div>
+				{% include "partials/components/_search.html" %}
+			</div>
+		</div>
+
 		<!-- BEGIN cards-main -->
 		<div class="cards__main">
+
 			<!-- BEGIN cards-aside -->
 			<aside class="cards__aside aside">
-				<div class="aside__top">
-					<h4 class="aside__top-title">Сортировка:</h4>
-          <div class="select-l select-l_wh">
-            <select class="select-l__el">
-              <option value="" selected="selected">
-                По популярности
-              </option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-          </div>
-				</div>
+				
 				<div class="aside__body">
 					<h3 class="aside__title">
 						Настройки фильтра:
@@ -70,67 +97,67 @@ title: Аренда и продажа недвижимости на Пхукет
 					<div class="aside__content">
 						<form>
 							<div class="aside__col">
-                <div class="select-l">
-                  <select class="select-l__el">
-                    <option value selected>Расположение</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-                </div>
+								<div class="select-l">
+									<select class="select-l__el">
+										<option value selected>Расположение</option>
+										<option value="1">Option 1</option>
+										<option value="2">Option 2</option>
+										<option value="3">Option 3</option>
+									</select>
+								</div>
 							</div>
 
 							<div class="aside__col">
-                <div class="select-l">
-                  <select class="select-l__el">
-                    <option value selected>Количество спален</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-                </div>
+								<div class="select-l">
+									<select class="select-l__el">
+										<option value selected>Количество спален</option>
+										<option value="1">Option 1</option>
+										<option value="2">Option 2</option>
+										<option value="3">Option 3</option>
+									</select>
+								</div>
 							</div>
 							<div class="aside__col">
 								<ul class="checkbox__list">
 									<li class="checkbox__item">
-                    <div class="checkbox">
-                      <input name="" id="villa" type="checkbox" class="checkbox__field">
-                      <label for="villa" class="checkbox__label">
-											<span class="checkbox__title">
-												Вилла
-											</span>
-                      </label>
-                    </div>
+										<div class="checkbox">
+											<input name="" id="villa" type="checkbox" class="checkbox__field">
+											<label for="villa" class="checkbox__label">
+												<span class="checkbox__title">
+													Вилла
+												</span>
+											</label>
+										</div>
 									</li>
 									<li class="checkbox__item">
 										<div class="checkbox">
-                      <input name="" id="appartament" type="checkbox" class="checkbox__field">
-                      <label for="appartament" class="checkbox__label">
-											<span class="checkbox__title">
-												Аппартамены
-											</span>
-                      </label>
-                    </div>
+											<input name="" id="appartament" type="checkbox" class="checkbox__field">
+											<label for="appartament" class="checkbox__label">
+												<span class="checkbox__title">
+													Аппартамены
+												</span>
+											</label>
+										</div>
 									</li>
 									<li class="checkbox__item">
 										<div class="checkbox">
-                      <input name="" id="hous" type="checkbox" class="checkbox__field">
-                      <label for="hous" class="checkbox__label">
-											<span class="checkbox__title">
-												Таунхаус
-											</span>
-                      </label>
-                    </div>
+											<input name="" id="hous" type="checkbox" class="checkbox__field">
+											<label for="hous" class="checkbox__label">
+												<span class="checkbox__title">
+													Таунхаус
+												</span>
+											</label>
+										</div>
 									</li>
 									<li class="checkbox__item">
 										<div class="checkbox">
-                      <input name="" id="as" type="checkbox" class="checkbox__field">
-                      <label for="as" class="checkbox__label">
-											<span class="checkbox__title">
-												Земельный участок
-											</span>
-                      </label>
-                    </div>
+											<input name="" id="as" type="checkbox" class="checkbox__field">
+											<label for="as" class="checkbox__label">
+												<span class="checkbox__title">
+													Земельный участок
+												</span>
+											</label>
+										</div>
 									</li>
 								</ul>
 
@@ -139,26 +166,26 @@ title: Аренда и продажа недвижимости на Пхукет
 
 							<div class="aside__col">
 								<div class="select-l">
-                  <select class="select-l__el">
-                    <option value="" selected="selected">
-                      Статус объекта
-                    </option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-                </div>
+									<select class="select-l__el">
+										<option value="" selected="selected">
+											Статус объекта
+										</option>
+										<option value="1">Option 1</option>
+										<option value="2">Option 2</option>
+										<option value="3">Option 3</option>
+									</select>
+								</div>
 							</div>
 
 							<div class="aside__col">
 								<div class="select-l">
-                  <select class="select-l__el">
-                    <option value selected>Цель</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-                </div>
+									<select class="select-l__el">
+										<option value selected>Цель</option>
+										<option value="1">Option 1</option>
+										<option value="2">Option 2</option>
+										<option value="3">Option 3</option>
+									</select>
+								</div>
 							</div>
 							<div class="range-slider">
 								<h5 class="range-slider__title">
@@ -190,24 +217,7 @@ title: Аренда и продажа недвижимости на Пхукет
 
 			<!-- BEGIN cards-body -->
 			<div class="cards__body">
-				<div class="cards__top">
-					<div class="objects">
-						<div class="objects__title">
-							Тип недвижимости :
-						</div>
-						<div class="objects__col">
-							<span class="objects__link objects__current">
-								Вся недвижимость
-							</span>
-							<a href="" class="objects__link is">Вилла</a>
-							<a href="" class="objects__link is-active">Аппартаменты</a>
-							<a href="" class="objects__link">Таунхаус</a>
-							<a href="" class="objects__link">Комплексы</a>
-						</div>
-
-					</div>
-					{% include "partials/components/_search.html" %}
-				</div>
+				
 				<div class="catalog-page">
 					<div class="catalog-page__navigation">
 						<span class="catalog-page__first catalog-page__current">1</span>

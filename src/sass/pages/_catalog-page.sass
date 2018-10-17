@@ -42,14 +42,6 @@
 		padding-top: 35px
 		padding-bottom: 127px
 		flex-direction: column
-	&__top
-		height: 57px	
-		padding-bottom: 6px
-		justify-content: space-between
-		border-bottom: 1px solid #dedede
-		align-items: flex-start
-		margin-bottom: 20px
-	&__top,
 	&__header,
 	&__in,
 	&__main,
@@ -66,23 +58,28 @@
 		margin: 17px 0 50px
 		position: relative
 	&__main
+		margin-top: 10px	
+		flex-wrap: wrap
 		flex-grow: 1
 		align-items: flex-start
 	&__body
+		padding-top: 16px	
+		border-top: 1px solid #dedede
 		width: 66%	
+		flex: 1
 	&__list
 		flex-wrap: wrap
 		justify-content: center
 		padding-top: 10px
 		padding-bottom: 7px
 		display: none
+		margin: 0 0 0 -3%
 		&.is-active
 			display: flex
 	&__item
-		width: 48%	
+		width: 47%	
 		max-width: 350px
-		&:not(:first-child)
-			margin-left: 3%	
+		margin-left: 3%	
 		flex-grow: 0
 		flex-shrink: 1
 		padding: 12px 0
@@ -90,9 +87,26 @@
 		position: absolute
 		top: -10px
 		right: 200px
+.cards-sort
+	display: flex
+	flex: 1 1 100%
+	justify-content: space-between
+	align-items: flex-start
+	&__l
+		flex: auto
+	&__r
+		flex: 1 1 557px
+		display: flex
+		justify-content: space-between	
+		align-items: center
+	&__title
+		color: $gray2
+		font-size: 14px
+		letter-spacing: 0.35px
+		margin-bottom: 3px
 .cards__list-col3
 	.cards__item
-		width: 31.33%
+		width: 30.33%
 .card
 	&__top
 		position: relative
@@ -227,7 +241,7 @@
 	color: $black
 	+regular
 	max-width: 485px
-	padding-top: 8px
+	padding-top: 10px
 	&__title
 		letter-spacing: 0.7px
 	&__col
@@ -285,9 +299,4 @@
 		color: $gray
 		letter-spacing: 0.35px
 		margin-bottom: 10px
-.aside__top-title
-	color: $gray2
-	font-size: 14px
-	letter-spacing: 0.35px
-	position: absolute
-	bottom: 110%
+
