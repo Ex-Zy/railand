@@ -5,8 +5,16 @@
 		padding-top: 50px
 		padding-bottom: 120px
 		max-width: 760px
+		+md
+			max-width: 480px
+			padding-bottom: 60px
+		+xs
+			padding-top: 30px	
+			padding-bottom: 30px	
 	&__body
 		margin: 37px 0 66px 0
+		+xs
+			margin: 30px 0
 	&__footer
 		background-color: white
 		.form__textarea
@@ -17,12 +25,17 @@
 	&__subtitle
 		color: $gray
 		margin-top: 38px
+		+xs
+			margin-top: 30px	
 	&__title
 		margin: 42px 0 14px 0
 		font-size: 24px
 		line-height: 20px
 		+regular
 		position: relative
+		+xs
+			font-size: 16px
+			margin: 25px 0 10px 0
 
 .info__list-item
 	margin: 13px 0
@@ -30,10 +43,16 @@
 	border-radius: 3px
 	background-color: #ffffff
 	padding: 14px 16px 16px 20px
+	+xs
+		padding: 10px
+		margin: 10px 0
 .info__list-title
 	+bold
 	position: relative
 	cursor: pointer
+	padding-right: 20px	
+	+xs
+		font-size: 12px
 	.icon
 		position: absolute
 		top: 50%
@@ -63,14 +82,19 @@
 	max-height: 0
 	+tr(max-height .3s ease-in)
 	overflow: hidden
+	font-size: 14px
+	+xs
+		font-size: 12px
 	h5
 		padding-top: 5px
-		font-size: 14px
 		+regular
+		font-size: 14px
+		+xs
+			font-size: 13px
+
 	p
 		padding: 2px 0
 	ul
 		margin-bottom: 11px
 		list-style-type: disc
-		font-size: 14px
 		padding-left: 17px
