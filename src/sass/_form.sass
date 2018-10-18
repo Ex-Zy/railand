@@ -4,19 +4,29 @@
 	background: $white
 	color: $gray
 	padding: 30px 20px 20px
+	+xs
+		padding: 15px
 	&__in
 		display: flex
 		justify-content: center
 		margin-top: 27px
 		font-size: 14px
+		+md
+			flex-direction: column
+		+xs
+			margin-top: 15px	
 	&__text
 		line-height: 20px
 		&:not(:first-child)
 			margin-top: 24px
+			+xs
+				margin-top: 15px
 	&__col
 		flex: 1
 		&:last-of-type
 			margin: 4px 0 0 30px
+			+md
+				margin: 20px 0 0 0
 	&__row
 		margin-bottom: 9px
 		width: 100%

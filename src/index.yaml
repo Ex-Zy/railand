@@ -8,7 +8,7 @@ PageList:
 - file: faq.html
   ready: 75
 - file: 404.html
-  ready: 75
+  ready: 100
 - file: about.html
   ready: 75
 - file: catalog.html
