@@ -20,6 +20,6 @@ PageList:
 - file: subjects.html
   ready: 100
 - file: contact.html
-  ready: 20
+  ready: 100
 - file: personal-area.html
-  ready: 20
+  ready: 50
