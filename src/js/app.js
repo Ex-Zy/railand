@@ -4,3 +4,4 @@ import './modules/sliders';
 import './modules/tabs';
 import './modules/range';
 import './modules/popup';
+import './modules/collapse';
