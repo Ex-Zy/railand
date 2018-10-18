@@ -10,7 +10,7 @@ PageList:
 - file: 404.html
   ready: 100
 - file: about.html
-  ready: 75
+  ready: 80
 - file: catalog.html
   ready: 75
 - file: cooperation.html
