@@ -3,3 +3,4 @@ import './modules/accordion';
 import './modules/sliders';
 import './modules/tabs';
 import './modules/range';
+import './modules/popup';

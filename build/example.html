@@ -60,9 +60,9 @@
                 </ul>
               </div>
               <div class="form-links">
-                <a href="#" class="form-links__item">Регистрация</a>
+                <a href="#" class="form-links__item btn-call-popup" data-popup="registration">Регистрация</a>
                 <div class="form-links__separator">|</div>
-                <a href="#" class="form-links__item">Войти</a>
+                <a href="#" class="form-links__item btn-call-popup" data-popup="login">Войти</a>
               </div>
             </div>
           </div>
@@ -98,11 +98,17 @@
       </svg>
       <li>Item1</li>
       <li>Item2</li>
-      <button type="button" class="btn">
-        <span>Покупка</span>
+      <button type="button" class="btn btn-call-popup" data-popup="login">
+        <span>Call popup (login)</span>
       </button>
-      <button type="button" class="btn btn_primary">
-        <span>Заполнить заявку</span>
+      <button type="button" class="btn btn-call-popup" data-popup="reset">
+        <span>Call popup (reset)</span>
+      </button>
+      <button type="button" class="btn btn-call-popup" data-popup="order">
+        <span>Call popup (order)</span>
+      </button>
+      <button type="button" class="btn btn-call-popup" data-popup="registration">
+        <span>Call popup (registration)</span>
       </button>
     </div>
     <!-- END content -->
@@ -155,6 +161,163 @@
       </div>
     </footer>
     <!-- END footer -->
+    <!-- BEGIN popups -->
+    <div class="popup-bg" id="popup-bg">
+      <div class="popup popup_registration" id="popup_registration">
+        <div class="cross popup-close js-close"></div>
+        <div class="popup__in">
+          <h2 class="popup__title">Введите регистрационные данные</h2>
+          <form>
+            <!-- BEGIN popup-form -->
+            <div class="popup__form">
+              <!-- BEGIN popup-body -->
+              <div class="popup__body">
+                <div class="form__row">
+                  <input type="text" class="form__field" placeholder="Логин*">
+                </div>
+                <div class="form__row">
+                  <input type="email" class="form__field" placeholder="E-mail*">
+                </div>
+                <div class="form__row">
+                  <input type="password" class="form__field" placeholder="Пароль*">
+                </div>
+                <div class="form__row">
+                  <input type="password" class="form__field" placeholder="Подтверждения пароля*">
+                </div>
+              </div>
+              <!-- END popup-body -->
+              <!-- BEGIN popup-footer -->
+              <div class="popup__footer">
+                <div class="popup__links">
+                  <button type="button" class="popup__link btn-call-popup" data-popup="reset">
+                    <span> Забыли пароль? </span>
+                  </button>
+                  <button type="button" class="popup__link btn-call-popup" data-popup="login">
+                    <span> Уже зарегестрированы? </span>
+                  </button>
+                </div>
+                <div class="popup__entry">
+                  <button type="submit" class="popup__btn btn"> Зарегестрироваться </button>
+                </div>
+              </div>
+              <!-- END popup-footer -->
+            </div>
+            <!-- END popup-form -->
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_login" id="popup_login">
+        <div class="cross popup-close js-close"></div>
+        <div class="popup__in">
+          <h2 class="popup__title">Введите email и пароль указанные <br> при регистрации</h2>
+          <form>
+            <!-- BEGIN popup-form -->
+            <div class="popup__form">
+              <!-- BEGIN popup-body -->
+              <div class="popup__body">
+                <div class="form__row">
+                  <input type="text" class="form__field" placeholder="Введите ваше имя">
+                </div>
+                <div class="form__row">
+                  <input type="password" class="form__field" placeholder="Введите ваш пароль">
+                </div>
+              </div>
+              <!-- END popup-body -->
+              <!-- BEGIN popup-footer -->
+              <div class="popup__footer">
+                <div class="popup__checkbox">
+                  <div class="checkbox">
+                    <input name="" id="remember" type="checkbox" class="checkbox__field">
+                    <label for="remember" class="checkbox__label"><span class="checkbox__title">Запомнить меня</span></label>
+                  </div>
+                </div>
+                <div class="popup__links">
+                  <button type="button" class="popup__link btn-call-popup" data-popup="reset">
+                    <span> Забыли пароль? </span>
+                  </button>
+                  <button type="button" class="popup__link btn-call-popup" data-popup="registration">
+                    <span> Регистрация на сайте </span>
+                  </button>
+                </div>
+                <div class="popup__entry">
+                  <button type="submit" class="popup__btn btn"> Вход </button>
+                </div>
+              </div>
+              <!-- END popup-footer -->
+            </div>
+            <!-- END popup-form -->
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_reset" id="popup_reset">
+        <div class="cross popup-close js-close"></div>
+        <div class="popup__in">
+          <h2 class="popup__title">Сброс пароля</h2>
+          <form>
+            <!-- BEGIN popup-form -->
+            <div class="popup__form">
+              <!-- BEGIN popup-body -->
+              <div class="popup__body">
+                <div class="form__row">
+                  <input type="email" class="form__field" placeholder="E-mail">
+                </div>
+              </div>
+              <!-- END popup-body -->
+              <!-- BEGIN popup-footer -->
+              <div class="popup__footer">
+                <div class="popup__entry">
+                  <button type="submit" class="popup__btn popup__btn-w100 btn"> Отправить ссылку для смены пароля </button>
+                </div>
+              </div>
+              <!-- END popup-footer -->
+            </div>
+            <!-- END popup-form -->
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_order" id="popup_order">
+        <div class="cross popup-close js-close"></div>
+        <div class="popup__in">
+          <h2 class="popup__title">Оставьте свой номер телефона, <br />менеджер свяжется с вами</h2>
+          <form>
+            <!-- BEGIN popup-form -->
+            <div class="popup__form">
+              <!-- BEGIN popup-body -->
+              <div class="popup__body">
+                <div class="form__row">
+                  <input type="text" class="form__field" placeholder="Как к вам обращаться?">
+                </div>
+                <div class="form__row form__row-fl">
+                  <div class="form__select">
+                    <div class="select-l">
+                      <select class="select-l__el">
+                        <option value="" selected="selected"> +380 </option>
+                        <option value="1">+380</option>
+                        <option value="2">+380</option>
+                        <option value="3">+380</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <input type="text" class="form__field" placeholder="Ваш номер">
+                  </div>
+                </div>
+              </div>
+              <!-- END popup-body -->
+              <!-- BEGIN popup-footer -->
+              <div class="popup__footer">
+                <div class="popup__entry">
+                  <button type="submit" class="popup__btn btn"> Отправить запрос </button>
+                </div>
+              </div>
+              <!-- END popup-footer -->
+            </div>
+            <!-- END popup-form -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END popups -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->

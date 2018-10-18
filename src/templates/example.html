@@ -5,28 +5,35 @@ title: Example title
 
 {% block content %}
 
-  {# variable example #}
-  <h1>{{title}}</h1>
+{# variable example #}
+<h1>{{title}}</h1>
 
-  {# mixin example #}
-  {{mixins.icon('facebook')}}
+{# mixin example #}
+{{mixins.icon('facebook')}}
 
-  {# data usage example #}
-  {% import "data/data.html" as tests %}
+{# data usage example #}
+{% import "data/data.html" as tests %}
 
-  {# for example #}
-    {% for test in tests.list %}
-    <li>{{test.title}}</li>
-    {% endfor %}
-  {# end for example #}
+{# for example #}
+{% for test in tests.list %}
+<li>{{test.title}}</li>
+{% endfor %}
+{# end for example #}
 
-  <button type="button" class="btn">
-    <span>Покупка</span>
-  </button>
 
-  <button type="button" class="btn btn_primary">
-    <span>Заполнить заявку</span>
-  </button>
+<button type="button" class="btn btn-call-popup" data-popup="login">
+  <span>Call popup (login)</span>
+</button>
+<button type="button" class="btn btn-call-popup" data-popup="reset">
+  <span>Call popup (reset)</span>
+</button>
+<button type="button" class="btn btn-call-popup" data-popup="order">
+  <span>Call popup (order)</span>
+</button>
+
+<button type="button" class="btn btn-call-popup" data-popup="registration">
+  <span>Call popup (registration)</span>
+</button>
 
 
 {% endblock %}

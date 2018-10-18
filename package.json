@@ -69,6 +69,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
+    "element-closest": "^2.0.2",
     "ion-rangeslider": "^2.2.0",
     "slick-carousel": "^1.8.1"
   }
