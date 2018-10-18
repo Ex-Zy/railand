@@ -14,7 +14,7 @@ export function callPopup() {
   // let registrationBtns = document.getElementsByClassName('btn_registration-payment');
   let curWidth = window.innerWidth;
   let thePose = 0;
-  let mobileW = 720;
+  let mobileW = 599;
   let isMobile = null;
   isMobile = chechIfMobile();
   // let tl = new TimelineMax();
