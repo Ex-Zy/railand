@@ -5,45 +5,76 @@
 	&__in
 		padding-top: 38px	
 		padding-bottom: 85px	
+		+md
+			padding-bottom: 50px	
+		+xs
+			padding-top: 25px	
+			padding-bottom: 25px
 	&__promo
 		font-size: 42px
 		padding-left: 16px	
 		+bold
+		+md
+			font-size: 28px
+		+sm
+			font-size: 20px
 	&__tags
 		margin-top: 20px
 		margin-left: 2px	
 .subjects-l
 	padding-bottom: 42px	
-	border-bottom: 1px solid #dedede	
+	border-bottom: 1px solid #dedede
+	+sm
+		padding-bottom: 20px		
 	&__figure
 		text-align: center
 		font-size: 0
 		margin-top: 24px
+		+sm
+			margin-top: 10px	
 	&__pic
 		height: 480px
 		+cover
 		width: 100%	
+		+md
+			height: 350px	
+		+sm
+			height: 200px	
 	&__desc
 		font-size: 12px
 		+bold
 		margin-top: 2px
 	&__item
 		margin-top: 40px
+		+sm
+			margin-top: 20px	
 	&__title
 		color: $black
 		font-size: 24px
 		+bold
+		+md
+			font-size: 18px
 	&__title,
 	&__content
 		padding-left: 90px
 		max-width: 986px
 		line-height: 30px
+		+sm
+			padding-left: 0	
+			line-height: 23px
 	&__content
 		font-size: 18px
 		color: $gray
-		margin-top: 26px	
+		margin-top: 26px
+		+sm
+			font-size: 16px
+			margin-top: 15px
+			line-height: 23px
+			font-size: 14px	
 		ul
 			margin-top: 30px
+			+sm
+				margin-top: 15px	
 
 .hero
 	margin-top: 18px
@@ -55,6 +86,13 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		.rubs
+			+sm
+				flex-direction: column
+				align-items: flex-start
+		.rubs__item
+			+sm
+				padding: 1px	
 	&__footer
 		margin-top: 17px	
 		font-size: 18px
@@ -62,6 +100,10 @@
 		line-height: 30px
 		padding-left: 90px	
 		max-width: 1010px
+		+sm
+			padding-left: 0	
+			font-size: 14px
+			line-height: 23px
 // author
 .author
 	display: flex
@@ -73,8 +115,11 @@
 		height: 70px
 		border-radius: 50%
 		position: relative
+		+sm
+			width: 40px	
+			height: 40px	
 		img
-			+vcenter
+			+coverdiv
 			object-fit: cover
 			border-radius: 50%
 	&__col
@@ -82,11 +127,20 @@
 		align-items: center
 		justify-content: center
 		margin-left: 15px	
+		flex-wrap: wrap
+		+sm
+			margin-left: 10px
+			align-items: flex-start
+			flex-direction: column	
 	&__date
 		color: $gray
 		margin-left: 5px	
+		+sm
+			margin-left: 0	
 
 .articles-news
 	margin-top: 73px	
+	+sm
+		margin-top: 40px	
 	.news__list
 		margin-top: 36px	

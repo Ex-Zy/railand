@@ -6,7 +6,7 @@ PageList:
 - file: example.html
   ready: 20
 - file: faq.html
-  ready: 75
+  ready: 100
 - file: 404.html
   ready: 100
 - file: about.html
@@ -18,7 +18,7 @@ PageList:
 - file: journal.html
   ready: 100
 - file: subjects.html
-  ready: 20
+  ready: 100
 - file: contact.html
   ready: 20
 - file: personal-area.html
