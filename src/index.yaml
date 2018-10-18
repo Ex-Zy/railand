@@ -14,7 +14,7 @@ PageList:
 - file: catalog.html
   ready: 75
 - file: cooperation.html
-  ready: 75
+  ready: 100
 - file: journal.html
   ready: 100
 - file: subjects.html

@@ -20,12 +20,22 @@
 		text-transform: uppercase
 		letter-spacing: 7.2px
 		color: $white
+		+md
+			font-size: 24px
+		+xs
+			font-size:  20px
 	&__btns
 		margin-top: 62px
+		+xs
+			margin-top: 40px	
 	&__btn
+		+sm
+			margin: 7px
 		box-shadow: 0 3px 13px rgba(28, 28, 28, 0.5)
 		&:not(:first-child)
 			margin-left: 20px
+			+sm
+				margin: 7px
 
 
 // audit
@@ -33,9 +43,19 @@
 	&__in
 		max-width: 1050px
 		padding-bottom: 40px	
+		+md
+			max-width: 480px
+		+xs
+			padding-bottom: 25px	
+			max-width: 320px
 	&__col
 		padding-top: 55px	
 		margin-top: -70px
+		+md
+			margin-top: -124px	
+			padding-top: 30px
+		+xs
+			// margin-top: 0		
 .audit-tabs
 	&__list
 		display: flex
@@ -43,12 +63,26 @@
 		justify-content: center
 		position: relative
 		top: -71px
+		flex-wrap: wrap
+		+md
+			top: -124px	
+		+xs
+			flex-direction: column
+			// top: auto
 	&__item
 		display: flex
 		flex: 1
 		align-items: center
+		justify-content: center
 		background: #f4f4f4
 		padding: 10px 24px
+		+md
+			padding: 0	
+			flex: 1 49%
+			margin: 1px
+			height: 60px	
+		+xs
+			margin: 0	
 		height: 69px
 		position: relative
 		cursor: pointer
@@ -64,11 +98,17 @@
 			background: lighten(#f4f4f4, 3%)
 		&:not(:first-child)
 			margin-left: 2px
+			+md
+				margin-left: 1px
+			+xs
+				margin: 0	
 		&.is-active
 			background: $white
 			&:before
 				transform: scaleY(1.4)
 				background: $white
+				+md
+					transform: scaleY(1.1)
 	&__title,
 	&__ico
 		z-index: 2
@@ -80,6 +120,8 @@
 		+bold
 		max-width: 140px
 		margin-left: 30px
+		+md
+			margin-left: 15px	
 	&__ico
 		display: block
 		background-repeat: no-repeat
@@ -91,6 +133,8 @@
 	line-height: 30px
 	display: none
 	flex-direction: column
+	+xs
+		line-height: 23px
 	&.is-active
 		display: flex
 	&__title
@@ -104,6 +148,8 @@
 		color: $gray
 		padding-left: 	20px
 		max-width: 945px
+		+xs
+			margin-top: 25px	
 		h4
 			color: $black
 			+bold
@@ -113,15 +159,29 @@
 	&__in
 		padding-top: 56px
 		max-width: 973px
+		+md
+			max-width: 480px
+		+xs
+			max-width: 320px
+			padding-top: 25px
 	&__list
 		margin-top: 58px
 		display: flex
+		flex-wrap: wrap
 		font-size: 0
 		text-align: center
+		+md
+			margin: 30px -26px 0
+		+xs
+			margin-top: 15px	
 	&__item
 		flex: 1
+		+md
+			padding: 13px
 		&:not(:first-child)
 			margin-left: 77px
+			+md
+				margin-left: 0	
 	&__l
 		border: 2px solid $red
 		border-radius: 50%
@@ -141,7 +201,8 @@
 	&__pic
 		margin-top: 20px	
 	&__desc
-		margin-top: 16px
 		font-size: 14px
+		max-width: 192px
+		margin: 16px auto 0
 		color: $gray
 		line-height: 18px
