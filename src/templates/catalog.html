@@ -50,7 +50,11 @@ title: Аренда и продажа недвижимости на Пхукет
 			</div>
 		</div>
 
-		<div class="cards-sort">	
+	
+
+		<!-- BEGIN cards-main -->
+		<div class="cards__main">
+	<div class="cards-sort">	
 			<div class="cards-sort__l">	
 				<!-- <h4 class="cards-sort__title">Сортировка:</h4> -->
 				<div class="select-l select-l_wh">
@@ -82,10 +86,6 @@ title: Аренда и продажа недвижимости на Пхукет
 				{% include "partials/components/_search.html" %}
 			</div>
 		</div>
-
-		<!-- BEGIN cards-main -->
-		<div class="cards__main">
-
 			<!-- BEGIN cards-aside -->
 			<aside class="cards__aside aside">
 
@@ -203,10 +203,11 @@ title: Аренда и продажа недвижимости на Пхукет
 							</div>
 						</form>
 					</div>
-					<div class="aside__map">
+					<div class="aside__map"> 
 						<h5>
 							Объекты на карте:
 						</h5>
+						<div class="aside__toggle js-toggle">	Объекты на карте:</div>
 						<div class="aside__pic">
 							<img src="img/card/map.jpg" alt=""/>
 						</div>
