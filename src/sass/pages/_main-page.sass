@@ -329,6 +329,8 @@
 .tab-links
 	display: flex
 	width: 350px
+	+xs
+		width: 260px	
 	&__item
 		width: 50%
 		+bold
@@ -341,6 +343,9 @@
 		position: relative
 		display: block
 		transition: color 0.25s
+		+md
+			font-size: 16px
+			padding: 7px 15px
 		&:first-of-type
 			margin-left: 0
 		&:last-of-type

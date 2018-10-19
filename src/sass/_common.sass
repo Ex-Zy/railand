@@ -150,6 +150,8 @@ img
 	letter-spacing: 1.4px
 	background: $red
 	transition: background 0.25s
+	+xs
+		font-size: 12px
 	&:hover
 		background: darken($red, 5%)
 	&:active
@@ -313,6 +315,10 @@ img
 	padding-left: 10px
 	width: 90%
 	margin: 33px 0 53px 0
+	+md
+		width: 100%	
+		margin: 23px 0 44px 0
+		padding-left: 0	
 	&__title,
 	&__inputs
 		font-size: 14px
@@ -323,8 +329,14 @@ img
 		justify-content: space-between
 		width: 100%
 		margin: 0 -14px	15px
+		+md
+			margin: 0 0 15px
 	&__col
 		padding: 0 14px
+		+md
+			padding: 0	
+		&:last-of-type
+			margin-left: 20px
 	&__input
 		width: 100%
 		display: block
@@ -339,6 +351,8 @@ img
 			color: $gray
 		&:focus
 			background: darken(#f3f3f3, 2%)
+		+xs
+			min-width: 100%
 // checkbox
 
 // pagination
@@ -348,6 +362,8 @@ img
 	text-transform: uppercase
 	justify-content: space-between
 	+regular
+	+sm
+		justify-content: flex-start
 	&__navigation
 		display: flex
 		justify-content: center
@@ -360,6 +376,8 @@ img
 				border-color: $black
 			.catalog-page__first
 				border-left: none
+			+sm
+				display: none
 	&__title
 		letter-spacing: 0.7px
 	&__current
@@ -374,6 +392,8 @@ img
 	&__link
 		text-decoration: none
 		padding: 0 8px
+		+xs
+			padding: 0 6px
 // catalog-list
 .catalog-list
 	display: flex
@@ -430,6 +450,10 @@ img
 	&_wh
 		width: 208px
 		margin-bottom: 0
+		+xs
+			width: 100%	
+		+md
+			margin: auto
 		.select-l__el
 			background-color: $white
 
