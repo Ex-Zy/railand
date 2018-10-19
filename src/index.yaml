@@ -6,26 +6,26 @@ PageList:
 - file: example.html
   ready: 20
 - file: faq.html
-  ready: 75
+  ready: 100
 - file: 404.html
-  ready: 75
+  ready: 100
 - file: about.html
-  ready: 75
+  ready: 80
 - file: catalog.html
   ready: 75
 - file: cooperation.html
-  ready: 75
+  ready: 100
 - file: journal.html
   ready: 100
 - file: subjects.html
-  ready: 20
+  ready: 100
 - file: contact.html
   ready: 100
 - file: personal-area.html
-  ready: 20
+  ready: 50
 - file: rental-object-card.html
-  ready: 5
+  ready: 70
 - file: villas-card.html
-  ready: 5
+  ready: 70
 - file: object-sale-card.html
-  ready: 5
+  ready: 70

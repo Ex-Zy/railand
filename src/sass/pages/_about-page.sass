@@ -8,6 +8,8 @@
 // promo
 .promo
 	min-height: 210px
+	+xs
+		min-height: 180px
 	&__title
 		+vcenter
 		+bold
@@ -15,6 +17,8 @@
 		letter-spacing: 7.2px
 		color: $white
 		text-transform: uppercase	
+		+sm
+			font-size: 26px
 // about
 .about
 	&__in
@@ -23,10 +27,23 @@
 		display: flex
 		justify-content: center
 		align-items: flex-start
+		+md
+			flex-direction: column
+			padding-top: 40px	
+			padding-bottom: 40px	
+			max-width: 480px
+		+xs
+			padding: 25px 15px
+			text-align: center
 	&__col
 		flex: 1
 		&:last-of-type
-			margin-left: 27px	
+			margin-left: 27px
+			+md
+				margin: 20px 0 0 0
+			+xs
+				margin: 15px 0 0 0
+				line-height: 23px
 	&__title,
 	&__subtitle
 		color: #181818
@@ -34,16 +51,28 @@
 		margin-bottom: 18px	
 		font-size: 42px
 		line-height: 42px
+		+md
+			font-size: 33px
+			line-height: 33px
+		+xs
+			font-size: 24px
+			line-height: 24px
 		span
 			text-transform: uppercase
 	&__subtitle
 		font-size: 18px
 		line-height	24px
 		+bold
+		+xs
+			font-size: 16px
+			line-height: 22px
+
 	&__text
 		color: $gray
 		line-height: 30px
 		font-size: 14px
+		+xs
+			line-height: 23px
 // advantages
 .advantages
 	min-height: 340px
@@ -52,6 +81,8 @@
 		padding-top: 39px
 		padding-bottom: 48px
 		max-width: 863px
+		+xs
+			padding: 25px 15px	
 	&__title
 		color: $white
 	&__list
@@ -60,23 +91,43 @@
 		justify-content: center
 		font-size: 14px
 		margin-top: 35px
+		flex-wrap: wrap
+		+sm
+			margin-top: 20px	
+			flex-direction: column
 	&__item
 		border: 2px solid #ffffff
 		border-radius: 50%
-		flex-basis: 200px
+		width: 200px
 		height: 200px	
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
 		text-align: center
 		padding: 47px 28px
+		+md
+			margin: 17px
+			padding: 30px 20px
+		+sm
+			margin: 13px
+			padding: 20px	
 		h4
 			text-transform: uppercase	
 			+bold
 			letter-spacing: 2.8px
 			margin-bottom: 15px
+			+xs
+				margin: 10px	
 		p
 			line-height: 18px
 			letter-spacing: 0.35px
 		&:not(:first-child)
 			margin-left: 107px
+			+md
+				margin: 17px
+			+sm
+				margin: 13px
 // team 
 .team
 	&__in
@@ -85,27 +136,60 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
+		+md
+			flex-direction: column
+			max-width: 480px
+			padding-bottom: 40px	
+		+xs
+			padding: 25px 15px
 	&__title
 		margin-bottom: 33px	
 		flex: 1 100%
+		+xs
+			margin-bottom: 20px	
+	&__pic
+		+xs
+			max-width: 320px
+			margin: auto
 	&__content
 		text-align: right
 		font-size: 14px
 		color: $gray
 	&__text
 		line-height: 30px
+		+xs
+			line-height: 23px
 		&:not(:first-child)
 			margin-top: 30px
+			+md
+				margin-top: 20px	
+			+xs
+				margin-top: 10px	
 	&__col
 		flex: 1
+		&:first-of-type
+			+md
+				order: 2
+				margin-top: 20px
+			+xs
+				margin-top: 10px		
 		&:last-of-type
-			margin-left: 30px				
+			margin-left: 30px	
+			+md
+				order: 1	
+				margin-bottom: 0			
 // about-order
 .about-order
 	min-height: 387px
 	padding: 77px 0 127px 0	
+	+md
+		padding-bottom: 60px
+	+xs
+		padding: 40px 0	
 	&__in
 		max-width: 950px
+		+md
+			max-width: 480px
 	&:before
 		content: ''
 		display: block	

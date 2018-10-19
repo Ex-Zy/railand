@@ -6,6 +6,8 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	+xs
+		height: 170px	
 	&__title
 		font-size: 36px
 		letter-spacing: 7.2px
@@ -13,12 +15,20 @@
 		color: $white
 		line-height: 1.4
 		text-transform: uppercase
+		+xs
+			font-size: 26px
 .contact-layout
 	position: relative
 	&__in
 		display: flex
 		padding-top: 80px
 		padding-bottom: 60px
+		+md
+			max-width: 	480px
+			flex-direction: column
+			padding: 40px 15px
+		+xs
+			padding: 25px 15px
 	&__left
 		padding: 0 65px 0 10px
 		width: 350px
@@ -27,9 +37,17 @@
 		+regular
 		font-size: 14px
 		line-height: 1.4
+		+md
+			order: 2
+			width: 100%	
+			margin-top: 20px	
+			padding: 0
+			padding-left: 10px	
 	&__right
 		flex-grow: 1
 		flex-shrink: 1
+		+md
+			order: 1
 		img
 			display: block
 			width: 100%
@@ -73,6 +91,9 @@
 		padding: 0
 		text-align: center
 		padding: 15px 0 0
+		+xs
+			padding: 0
+			margin-top: 20px	
 .form
 	&__title
 		font-size: 18px
@@ -81,3 +102,5 @@
 		letter-spacing: 0.9px
 		color: $black
 		+regular
+		+xs
+			font-size: 16px

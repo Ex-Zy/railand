@@ -84,6 +84,8 @@ $bg_gray: #f3f3f3
 	letter-spacing: 3.6px
 	text-transform: uppercase
 	color: $black
+	+xs
+		font-size: 16px
 //icons
 .icon-arr
 	font-size: 6px
@@ -94,6 +96,8 @@ $bg_gray: #f3f3f3
 .icon-arrd
 	font-size: 24px
 	fill: #bcbcbc
+	+xs
+		font-size: 16px
 .icon-cancel
 	font-size: 16px
 	+tr(opacity .3s ease)
@@ -437,10 +441,16 @@ img
 	align-items: center
 	line-height: 30px
 	text-transform: uppercase
+	flex-wrap: wrap
+	+xs
+		font-size: 16px
+		line-height: 20px
 	&__txt
 		margin: 0 5px 0 0
 	&__item
 		padding: 5px 3px
+		+xs
+			padding: 3px
 		color: #fe3e5d
 		cursor: pointer
 		+tr(opacity .25s ease)
