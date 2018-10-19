@@ -51,21 +51,22 @@
 	&__aside
 		flex-shrink: 0
 		flex-grow: 0
-		max-width: 348px	
+		max-width: 348px
 		// flex: 0 1 348px
 		margin-right: 36px
 	&__header
 		margin: 17px 0 50px
 		position: relative
 	&__main
-		margin-top: 10px	
+		margin-top: 10px
 		flex-wrap: wrap
 		flex-grow: 1
 		align-items: flex-start
 	&__body
-		padding-top: 16px	
+		padding-top: 16px
 		border-top: 1px solid #dedede
-		width: 66%	
+		//width: 66%
+		width: calc(100% - 384px)
 		flex: 1
 	&__list
 		flex-wrap: wrap
@@ -74,9 +75,9 @@
 		padding-bottom: 7px
 		margin: 0 0 0 -3%
 	&__item
-		width: 47%	
+		width: 47%
 		max-width: 350px
-		margin-left: 3%	
+		margin-left: 3%
 		flex-grow: 0
 		flex-shrink: 1
 		padding: 12px 0
@@ -94,7 +95,7 @@
 	&__r
 		width: calc(100% - 384px)
 		display: flex
-		justify-content: space-between	
+		justify-content: space-between
 		align-items: center
 	&__title
 		color: $gray2
@@ -294,7 +295,7 @@
 		justify-content: space-between
 		align-items: center
 		padding-left: 10px
-		// margin-right: -30px	
+		// margin-right: -30px
 	h5
 		font-size: 14px
 		color: $gray

@@ -1,0 +1,16 @@
+<div class="slideshow">
+  <div class="slideshow__preview">
+    <img src="https://via.placeholder.com/730x450" width="730" height="450" alt="">
+  </div>
+  <div class="slideshow__thumbs">
+    <button type="button" class="slideshow__arrow-left">prev</button>
+    <button type="button" class="slideshow__arrow-right">next</button>
+    <div class="thumbs-list">
+      {% for i in range(0, 4) -%}
+      <div class="thumbs-list__item {% if loop.first -%} is-active {% endif %}">
+        <img src="https://via.placeholder.com/160x100" width="160" height="100" alt="">
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>

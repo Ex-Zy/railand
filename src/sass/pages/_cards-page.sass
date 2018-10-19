@@ -1,0 +1,318 @@
+.slideshow
+	position: relative
+	box-shadow: 0 10px 49px rgba(28, 28, 28, 0.15)
+	background-color: $white
+	&__preview
+		height: 450px
+		width: 100%
+		position: relative
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			object-fit: cover
+	&__thumbs
+		padding: 0 40px
+		position: relative
+	&__arrow-left,
+	&__arrow-right
+		+hide-text
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 0
+		width: 40px
+		height: 40px
+		z-index: 10
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			+vcenter
+			width: 19px
+			height: 6px
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAGCAYAAAAhS6XkAAAAU0lEQVQoU6WPwQ3AMAgDjwnaTZqRmomaDdpRK0ug8E3wB2SB5TOmTuABevKWVvPrBryAZnhLQTrW4+2N1KykCBvAUUpKSML7gKuKGYWEqYbC3tIPD2IGBRV+ceIAAAAASUVORK5CYII=) no-repeat center
+	&__arrow-right
+		left: auto
+		right: 0
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			+vcenter
+			width: 19px
+			height: 6px
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAGCAYAAAAhS6XkAAAARUlEQVQoU2NkoAwsYGBgKGBgYPgAMoaRMrMY/jMwMFxgYGBIBNEgw0AClAKQywqpZdhHkHep4c2LDAwMCTBvUuJFlAgAAAtbDscHKbv8AAAAAElFTkSuQmCC) no-repeat center
+.thumbs-list
+	display: flex
+	margin: 0 -1px
+	padding: 20px 0
+	&__item
+		width: 25%
+		height: 100px
+		padding: 0 1px
+		position: relative
+		outline: 0
+		transition: outline 0.25s
+		cursor: pointer
+		&:after
+			content: ''
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			z-index: 1
+			background-color: rgba(0, 0, 0, 0.35)
+			opacity: 0
+			transition: opacity 0.25s
+		&.is-active
+			z-index: 1
+			outline: 2px solid #fe5974
+			&:after
+				opacity: 1
+		&:hover
+			&:after
+				opacity: 0.3
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+.topper
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 23px 10px 12px
+	&__name
+		letter-spacing: 0.7px
+		text-transform: uppercase
+		+regular
+		font-size: 14px
+		line-height: 1.2
+.breadcrumb
+	position: relative
+	display: flex
+	align-items: center
+	letter-spacing: 0.6px
+	+regular
+	font-size: 12px
+	text-transform: uppercase
+	color: $black
+	line-height: 1.2
+	a
+		letter-spacing: 0.6px
+		+regular
+		font-size: 12px
+		text-transform: uppercase
+		color: $black
+		line-height: 1.2
+		padding: 5px 2px
+		display: inline-block
+		transition: color 0.25s
+		&:hover
+			color: $red
+	span
+		color: #bcbcbc
+		display: inline-block
+		padding: 5px 2px
+.card-main
+	border: 0
+	padding: 0
+	&__title
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 100%
+			margin: 12px 0 0
+			left: 0
+			right: 0
+			border-top: 1px solid #dedede
+			z-index: 1
+.columns
+	position: relative
+	display: flex
+	margin: 30px -15px 0
+	&__left
+		width: calc(100% - 285px)
+		padding: 0 15px
+		flex-grow: 0
+		flex-shrink: 1
+	&__right
+		width: 285px
+		flex-grow: 0
+		flex-shrink: 1
+		padding: 0 15px
+	&__title
+		letter-spacing: 1.8px
+		text-transform: uppercase
+		font-size: 18px
+		+regular
+		margin: 0 0 20px
+	&__content-wrp
+		position: relative
+		padding: 0 0 60px
+	&__content
+		color: $gray
+		font-size: 16px
+		+regular
+		line-height: 1.2
+		text-align: left
+		position: relative
+		&.is-short
+			height: 200px
+			overflow: hidden
+		h4
+			margin: 30px 0 0
+			text-transform: uppercase
+		p + p
+			margin: 30px 0 0
+		p
+			font-size: 14px
+			line-height: 1.6
+	&__btn-more
+		bottom: 0
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+.similar
+	position: relative
+	padding: 20px 15px
+	background: $white
+	&__top
+		letter-spacing: 0.45px
+		color: $black
+		font-size: 18px
+		+bold
+		line-height: 1.2
+	&__pic
+		margin: 10px 0 0
+		position: relative
+		height: 140px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			display: block
+	&__txt
+		color: $gray
+		+regular
+		font-size: 14px
+		line-height: 1.2
+		margin: 15px 0 0
+	&__btn
+		width: 100%
+		min-width: auto
+		font-size: 12px
+		+bold
+		letter-spacing: 0.6px
+		display: block
+		margin: 15px 0 0
+.liberty-icons
+	display: flex
+	margin: 20px -5px 20px
+	&__item
+		margin: 0 5px
+		width: 65px
+		height: 65px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: $white
+.resemling-list-wrp
+	position: relative
+	padding: 20px 0 0
+	margin: 50px 0 0
+	border-top: 1px solid #dedede
+.resemling-title
+	+bold
+	color: $black
+	text-transform: uppercase
+	letter-spacing: 3.6px
+	line-height: 1.2
+	text-align: center
+	font-size: 18px
+.resembling-list
+	display: flex
+	margin: 20px -15px 0
+	&__item
+		padding: 0 15px
+		width: 50%
+		flex-grow: 0
+		flex-shrink: 0
+.info-object
+	background: $white
+	margin: 0 0 30px
+	&__in
+		padding: 13px 20px 17px
+	&__row
+		display: flex
+		border-bottom: 1px solid #f3f3f3
+		padding: 7px 0 3px
+		&:last-of-type
+			border: 0
+	&__name
+		color: $gray
+		+regular
+		font-size: 16px
+		letter-spacing: 0.4px
+		line-height: 1.2
+		width: 70%
+		flex-grow: 0
+	&__val
+		+bold
+		color: $black
+		line-height: 1.2
+		font-size: 16px
+		letter-spacing: 0.4px
+		width: 30%
+		flex-shrink: 0
+		flex-grow: 0
+		text-align: right
+.small-map
+	position: relative
+	margin: 40px 0 0
+	&__title
+		color: $gray
+		font-size: 14px
+		+regular
+		line-height: 1.2
+		letter-spacing: 0.35px
+		padding: 0 0 0 10px
+		margin: 0 0 5px
+.options
+	position: relative
+	&__top
+		padding: 0 0 15px
+		border-bottom: 1px solid #dedede
+	&__title
+		color: $black
+		+bold
+		line-height: 1.2
+		font-size: 20px
+		letter-spacing: 0.35px
+	&__bottom
+		border-top: 1px solid #dedede
+		padding: 30px 0 0
+	&__btn
+		width: 100%
+		display: block
+.options-list
+	color: $gray
+	line-height: 1.2
+	+regular
+	font-size: 14px
+	letter-spacing: 0.35px
+	margin: 20px 0
+	&__title
+		margin: 15px 0 0
+		&:first-of-type
+			margin: 0
+	&__description
+		+bold
+		color: $black
+		margin: 5px 0 0

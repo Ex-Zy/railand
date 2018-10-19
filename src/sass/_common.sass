@@ -45,6 +45,13 @@ $bg_gray: #f3f3f3
 	font-weight: normal
 
 // titles
+.title-large
+	letter-spacing: 1.05px
+	+bold
+	font-size: 42px
+	line-height: 1.2
+	text-align: left
+	color: $black
 .title-primary
 	text-align: center
 	+bold
@@ -105,9 +112,9 @@ body
 	left: 0
 	position: static
 	top: 0
-	&.is-fixed 
+	&.is-fixed
 		position: fixed
-	&.is-overflow 
+	&.is-overflow
 		overflow: hidden
 		height: 100%
 
@@ -164,6 +171,32 @@ img
 	&:hover
 		.icon-cancel
 			opacity: 0.7
+.btn-more
+	cursor: pointer
+	position: relative
+	text-transform: uppercase
+	font-size: 12px
+	+bold
+	letter-spacing: 0.6px
+	color: $black
+	height: 45px
+	padding: 0 65px 0 0
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	transition: opacity 0.25s
+	&:hover
+		opacity: 0.8
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		width: 45px
+		height: 45px
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAADcUlEQVRoQ9WZQU8TQRTH/48dE07ahJJgQrQc9WJ7KfEEXvXCURON5aBeKJRPQPkEVstFOVCiid705BU4EcqBctFjCyHBhJq0nojs9pnZdpt2abud6bKhvXbee795++Y/M28IA/5S+fGoCcwQalGAIgBmXS4rAAoAlxgjBQHsZOJnhUHCko5xanciYhnmEsBzDVBFN1xiopwwxWbm4e+SojGUoOuwFysAJVQDdR/POcO6saoC3xd06iAUMk2xRIy0f7DtnpiQFsJ8l4lVZDn1/HlC12uWNwiIejkb9H8GCgI071XzPaEX9sOzxPgGIDQokIJ9xQA96gXeFTqZH08AvKEQzOehNJ+Nn+U6Oe0I3cjwls8Uyu4MUKxTxi9Byxq2wBI4yJLoNqGKYYmYW1naoG2VuBBbQSy6ftMuF+davBxrHd8GvbgXTjNhpV+HQY0jxur76XJTbpvQjV2uGBSIahzDElNOmTShF/LjOQK/VHUW1HgGba7Fz+yd2Ia+7ll2EuNk24ZezI9lGLQUVNZ04zi1bUMn82NFvdOabnhdOy5l43+mqKHLB7pugraTGw4l98MpMN4GHVw7HmGZVFUjOfUDAGP9+BnOrb/asUeNm3h154ttny0+6duPVBFK5sPbAGb6tZLQt0fv4fT8pza4A3x79D5Oz38hW3zcb3g5bkdCs4pFPeBXbXA38PrxU9UvVlGGlhPUBfcB2M6vFrQOuF/AA0GrgPsJ7EDLi+QtlbpuHetVKn4DA6gqq0enyXUDvwLgunqo6nS3L+IG/3zyBs8nP8CRNQ2V6BiqrtM+7oit4E5EqcN+AdelA8u+nz3aM+4zMAD77GGf8vbCJRDu6i5Gt50EfzH5EZ9OXqtuHL0RGEfZ6XJkeM/TQ3lzkd/ELxXxq8Tcfi7dEeWA657tjrdxCT50fQ872wehkHUh5Pn6wVV9Zg2/h9l4ua3N3K2XJ8G1zyMaYN1MqoYloj17eY7ldbns9t01dcCHrj/tgDf61N8DLpWqAZrVeglwlYrsyAexOA8NS8x5vXR5PhQ5qlL7J1JX2QZ2t3N7Lea+oJtZ352ImIaV9rO7Knc6YRlpr+y2TkIJuhW+NmImGEhonQ4ZRwTkRmoipwLrxNeCbp21LY/Es8wUJbB8G5cbQavGV+XbOINKRFwwmLa93gm9dP4/1Jrp8vJDHT0AAAAASUVORK5CYII=) no-repeat center
 // inputs
 %inputs
 	width: 100%
@@ -402,12 +435,12 @@ img
 	+regular
 	display: flex
 	align-items: center
-	line-height: 30px	
-	text-transform: uppercase	
+	line-height: 30px
+	text-transform: uppercase
 	&__txt
 		margin: 0 5px 0 0
 	&__item
-		padding: 5px 3px	
+		padding: 5px 3px
 		color: #fe3e5d
 		cursor: pointer
 		+tr(opacity .25s ease)

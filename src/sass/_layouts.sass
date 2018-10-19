@@ -183,6 +183,9 @@
 	letter-spacing: 0.5px
 	margin: 0 20px 0 0
 	position: relative
+	&.is-active
+		.pselect__list
+			display: block
 	&__current
 		position: relative
 		padding: 0 20px 0 0
@@ -198,6 +201,7 @@
 			margin: auto
 	&__list
 		display: none
+		background: $white
 		position: absolute
 		top: 100%
 		left: 0
