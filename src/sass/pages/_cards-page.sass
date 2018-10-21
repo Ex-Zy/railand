@@ -276,6 +276,8 @@
 .small-map
 	position: relative
 	margin: 40px 0 0
+	+xs
+		margin: 40px -12px 0
 	&__title
 		color: $gray
 		font-size: 14px
@@ -284,6 +286,15 @@
 		letter-spacing: 0.35px
 		padding: 0 0 0 10px
 		margin: 0 0 5px
+		+xs
+			display: none
+	&__container
+		+xs
+			overflow: hidden
+			max-height: 0
+			+tr(max-height .3s ease-in)
+			img
+				width: 100%	
 .options
 	position: relative
 	&__top

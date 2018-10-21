@@ -115,8 +115,11 @@
 	&__body
 		padding-top: 16px
 		border-top: 1px solid #dedede
-		width: 66%
+		// width: 66%
 		flex: 1
+		width: calc(100% - 384px)
+		+r(1100)
+			width: calc(100% - 336px)
 		+md
 			order: 3
 			width: 100%
