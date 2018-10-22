@@ -261,14 +261,30 @@
 			top: 0
 			height: 1px
 			background: #e5e5e5
+		+md
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			padding-top: 40px
+			padding-bottom: 40px
+			max-width: 450px
+		+xs
+			padding-top: 25px
+			padding-bottom: 25px
 	&__top-left
 		width: calc(100% - 300px)
 		padding: 5px 0 0
+		+md
+			width: 100%
 	&__top-right
 		width: 300px
 		display: flex
 		flex-direction: column
 		align-items: flex-end
+		+md
+			width: 100%
+			align-items: center
+			margin-top: 35px
 	&__bottom
 		background-color: #e8e8e8
 	&__bottom-in
@@ -276,10 +292,27 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+md
+			height: auto
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding-top: 40px
+			padding-bottom: 40px
+			max-width: 450px
+		+xs
+			padding-top: 25px
+			padding-bottom: 25px
 	&__bottom-left
 		display: flex
+		+md
+			flex-direction: column
+			align-items: center
+			justify-content: center
 	&__messengers
 		margin: 15px 0 0
+		+md
+			margin: 35px 0 0
 	&__logo
 		width: 120px
 		height: 30px
@@ -291,6 +324,8 @@
 			opacity: 0.7
 .fnav
 	column-count: 3
+	+md
+		column-count: 2
 	&__item
 		display: flex
 	&__link
@@ -302,6 +337,11 @@
 		padding: 5px 20px
 		display: inline-block
 		transition: color 0.25s
+		+md
+			padding: 2px 27px 
+			padding-right: 0
+		+xs
+			font-size: 13px
 		&:hover
 			color: darken(#818181, 45%)
 		&:before
@@ -331,6 +371,12 @@
 	+regular
 	color: $black
 	margin: 0 0 0 30px
+	+md
+		text-align: center
+		margin: 35px auto
+		line-height: 1.3
+	+xs
+		font-size: 11px
 .social
 	display: flex
 	&__item
