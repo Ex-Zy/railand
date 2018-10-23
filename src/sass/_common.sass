@@ -77,6 +77,21 @@ $bg_gray: #f3f3f3
 	&__left
 		text-align: right
 		padding: 0 588px 0 0px
+		+md
+			padding: 0 430px 0 0
+		+sm
+			text-align: center
+			padding: 0 330px 0 0px
+			span
+				&:before
+					display: none
+		+xs
+			font-size: 13px
+			text-align: left
+			padding: 0 100px 0 0
+		+xss
+			text-align: center
+			padding: 0
 .title-secondary
 	+bold
 	font-size: 18px

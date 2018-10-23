@@ -49,16 +49,27 @@
 	+bold
 	font-size: 12px
 	color: $black
+	+md
+		height: auto
 	&__in
 		display: flex
 		height: 200px
 		align-items: center
+		+md
+			height: auto
+			padding-top: 40px	
+			padding-bottom: 40px	
 	&__list
 		display: flex
 		width: 100%
+		flex-wrap: wrap
 	&__list-item
 		width: 25%
 		padding: 0 10px
+		+md
+			width: 50%
+			&:not(:last-child)
+				margin-bottom: 25px		
 .iblock
 	&__icon
 		width: 60px
@@ -68,6 +79,10 @@
 	&__text
 		text-transform: uppercase
 		letter-spacing: 0.6px
+		+xs
+			font-size: 12px
+			br
+				display: none
 	.icon
 		position: absolute
 		+vcenter
@@ -253,6 +268,10 @@
 		padding-top: 67px
 		padding-bottom: 34px
 		position: relative
+		+xs
+			max-width: 480px
+		+xss
+			padding-top: 40px
 	&__btn
 		background: $green
 		margin: 90px 0 0 190px
@@ -273,26 +292,54 @@
 		position: absolute
 		right: 205px
 		top: 56px
+		+md
+			right: 50px
+		+xs
+			right: 5px	
+		+xss
+			position: static
+			margin-top: 20px	
 .alist
 	margin: -42px -30px 0
 	flex-wrap: wrap
 	display: none
+	+r(1100)
+		margin: -42px 0 0
+	+md
+		margin: -42px -15px 0
+	+sm
+		margin: 0 -15px 0 0px
+		justify-content: center
+		align-items: center
 	&.is-active
 		display: flex
 	&__item
 		width: 50%
 		padding: 0 30px
 		margin: 108px 0 0
+		+md
+			padding: 0 15px
+		+sm
+			width: 100%
+			margin: 42px 0 0
 		&:nth-of-type(even)
 			position: relative
 			top: 60px
+			+sm
+				position: static
 .aitem
 	display: flex
+	+sm
+		justify-content: center
+		align-items: center
 	&__pic
 		width: 255px
 		height: 300px
 		border: 8px solid $white
 		position: relative
+		+xs
+			width: 189px	
+			height: 221px	
 		img
 			position: absolute
 			top: 0
@@ -302,6 +349,10 @@
 			object-fit: cover
 	&__content
 		padding: 30px 0 0 30px
+		+md
+			padding: 20px 0 0 20px
+		+xs
+			padding: 20px 0 0 16px
 	&__title
 		margin: 0 0 0 -95px
 		background: $white
@@ -315,22 +366,42 @@
 		position: relative
 		z-index: 1
 		width: 255px
+		+md
+			min-height: 80px
+			font-size: 16px
+			padding: 12px 13px
+		+xs
+			font-size: 13px
+			margin: 0 0 0 -68px
+			width: 179px	
 	&__list
 		+regular
 		font-size: 14px
 		line-height: 1.4
 		color: $gray
 		margin: 40px 0 0
+		+md
+			margin: 26px 0 0
+		+xs
+			font-size: 11px
 	&__price
 		text-transform: uppercase
 		font-size: 28px
 		margin: 14px 0 0
 		+bold
+		+xs
+			font-size: 21px
+			margin: 9px 0 0
 .tab-links
 	display: flex
 	width: 350px
-	+xs
-		width: 260px	
+	+sm
+		width: 260px
+		justify-content: center
+		// width: 155px
+	+xss
+		width: 100%	
+		margin: 20px auto 0
 	&__item
 		width: 50%
 		+bold
@@ -344,10 +415,15 @@
 		display: block
 		transition: color 0.25s
 		+md
-			font-size: 16px
-			padding: 7px 15px
-		&:first-of-type
-			margin-left: 0
+			width: 44%
+			margin: 0 10px
+		+xs
+			width: 35%	
+			margin: 0 6px
+			padding: 6px 3px	
+			font-size: 15px
+		+xss
+			font-size: 12px
 		&:last-of-type
 			margin-right: 0
 		&:hover
