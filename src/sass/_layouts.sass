@@ -261,27 +261,23 @@
 			top: 0
 			height: 1px
 			background: #e5e5e5
-		+md
+		+xs
 			flex-direction: column
 			align-items: center
 			justify-content: center
-			padding-top: 40px
-			padding-bottom: 40px
-			max-width: 400px
-		+xs
-			padding-top: 25px
-			padding-bottom: 25px
+			padding-top: 35px
+			padding-bottom: 45px
 	&__top-left
 		width: calc(100% - 300px)
 		padding: 5px 0 0
-		+md
+		+xs
 			width: 100%
 	&__top-right
 		width: 300px
 		display: flex
 		flex-direction: column
 		align-items: flex-end
-		+md
+		+xs
 			width: 100%
 			align-items: center
 			margin-top: 35px
@@ -292,26 +288,24 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
-		+md
+		+xs
 			height: auto
 			flex-direction: column
 			justify-content: center
 			align-items: center
-			padding-top: 40px
-			padding-bottom: 40px
-			max-width: 400px
-		+xs
 			padding-top: 25px
 			padding-bottom: 25px
 	&__bottom-left
 		display: flex
-		+md
+		width: calc(100% - 140px)
+		+xs
+			width: 100%	
 			flex-direction: column
 			align-items: center
 			justify-content: center
 	&__messengers
 		margin: 15px 0 0
-		+md
+		+xs
 			margin: 35px 0 0
 	&__logo
 		width: 120px
@@ -320,12 +314,19 @@
 		display: inline-block
 		transition: opacity 0.25s
 		+hide-text
+		background-size: contain
+		+xs
+			width: 199px
+			height: 57px	
 		&:hover
 			opacity: 0.7
 .fnav
 	column-count: 3
-	+md
+	+sm
 		column-count: 2
+	+xs
+		max-width: 342px
+		margin: auto
 	&__item
 		display: flex
 	&__link
@@ -337,11 +338,10 @@
 		padding: 5px 20px
 		display: inline-block
 		transition: color 0.25s
-		+md
-			padding: 2px 27px 
-			padding-right: 0
 		+xs
 			font-size: 13px
+			padding: 3px 26px
+			padding-right: 0	
 		&:hover
 			color: darken(#818181, 45%)
 		&:before
@@ -371,11 +371,11 @@
 	+regular
 	color: $black
 	margin: 0 0 0 30px
-	+md
-		text-align: center
-		margin: 35px auto
-		line-height: 1.3
 	+xs
+		text-align: center
+		margin: 25px auto
+		line-height: 1.3
+	+xss
 		font-size: 11px
 .social
 	display: flex
