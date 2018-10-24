@@ -4,15 +4,16 @@
 		padding-top: 25px
 		padding-bottom: 54px
 		max-width: 950px
-		+md
-			max-width: 480px
 		+xs
-			padding: 25px 15px	
+			max-width: 480px
+			padding: 30px 15px	
 	&__header
 		display: flex
 		align-items: center
 		justify-content: space-between
 		+md
+			justify-content: center
+		+xs
 			flex-direction: column
 	&__footer
 		margin-top: 46px
@@ -21,13 +22,14 @@
 	&__col
 		&:first-of-type
 			max-width: 310px
-			+md
+			+xs
 				max-width: 100%
 		&:last-of-type
 			padding-top: 15px
 			+md
 				max-width: 320px
-				padding-top: 20px
+				padding-top: 0
+				margin-top: 30px	
 			+xs
 				max-width: 260px
 	&__title
