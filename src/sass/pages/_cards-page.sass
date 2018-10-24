@@ -295,6 +295,7 @@
 			+tr(max-height .3s ease-in)
 			img
 				width: 100%	
+
 .options
 	position: relative
 	&__top
@@ -312,6 +313,9 @@
 	&__btn
 		width: 100%
 		display: block
+.options__bottom-rent
+	border-top: 0	
+	padding: 20px 0	0
 .options-list
 	color: $gray
 	line-height: 1.2
@@ -327,3 +331,43 @@
 		+bold
 		color: $black
 		margin: 5px 0 0
+
+.rent
+	font-size: 14px
+	&__title
+	    color: $gray
+	    line-height: 1.2
+	    letter-spacing: .35px
+	    +regular
+	    padding-left: 11px	
+	    margin: 20px 0 10px 0
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: center	
+		position: relative
+		padding: 10px	
+		background-color: #f3f3f3
+		.icon-arr
+			+vcenter
+			font-size: 4px
+	&__select			
+		width: 100%	
+	&__price
+		display: flex
+		justify-content: space-between	
+		+bold
+		font-size: 18px
+		margin: 20px 0
+	&__info
+		color: $gray
+		font-size: 10px
+	&__picker
+		@extend %inputs
+		font-size: 14px
+		color: $black
+		background: none
+	&__date
+		display: flex
+		flex: 0 0 30%
+		max-width: 72px
