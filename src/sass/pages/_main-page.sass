@@ -217,12 +217,26 @@
 	&__in
 		padding-top: 64px
 		padding-bottom: 60px
+		+md
+			max-width: 767px
+		+sm
+			max-width: 480px
+			padding: 50px 15px
 .reviews-slider
 	position: relative
 	text-align: center
 	margin: 40px 0 0
+	+xs
+		margin: 24px 0 0 
 	&__item
 		max-width: 710px
+		+md
+			max-width: 480px
+		+sm
+			padding: 0 60px	
+		+xs
+			max-width: 320px
+			padding: 0 50px
 	.slick-arrow
 		width: 65px
 		position: absolute
@@ -244,6 +258,13 @@
 			width: 65px
 			height: 6px
 			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAGCAYAAACcqvORAAAAXElEQVQ4T+3UwQmAQAxE0bcWYAN24tkiLETsxRbswYuCtiULgqlhd3MKuf1PZpJ/Oix4cIV78Wv6CAfsGDHhKJ48AGYJMzb0NYFH1iYBLQ5BQv6OXIwrbpw1ReMFHpUKBZoLEZ0AAAAASUVORK5CYII=) no-repeat center
+			+md
+				top: 30%
+			+sm
+				background-size: contain
+				width: 30px
+			+xs	
+				top: -10%	
 	.slick-next
 		right: -10px
 		&:before
@@ -254,6 +275,13 @@
 			width: 65px
 			height: 6px
 			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAGCAYAAACcqvORAAAAUElEQVQ4T+3UwQmAMBQE0ZdOtCc78BQbEOzRFsQiPAqRD6aKn+1gBmaLfJuw4cAb+CWfAzMunFhwh4SWUERHfrAOCdSRw59DthriGCv2Dv4B5IANud7hb+wAAAAASUVORK5CYII=) no-repeat center
+			+md
+				top: 30%
+			+sm
+				background-size: contain
+				width: 30px
+			+xs	
+				top: -10%	
 	.slick-dots
 		display: flex
 		justify-content: center
@@ -284,6 +312,9 @@
 		width: 160px
 		height: 160px
 		margin: 0 auto
+		+xs
+			width: 100px	
+			height: 100px	
 		img
 			width: 100%
 			height: 100%
@@ -299,6 +330,9 @@
 		text-transform: uppercase
 		letter-spacing: 1.2px
 		margin: 14px 0 0
+		+xs
+			font-size: 10px
+			margin: 5px 0 0
 	&__txt
 		color: $gray
 		font-size: 14px
@@ -306,6 +340,11 @@
 		line-height: 1.4
 		letter-spacing: 0.35px
 		margin: 14px 0 0
+		+sm
+			font-size: 12px
+			margin: 33px 0 0
+		+xs
+			font-size: 10px
 	&__date
 		color: #181818
 		+regular
@@ -313,6 +352,8 @@
 		line-height: 1.4
 		text-transform: uppercase
 		margin: 18px 0 0
+		+xs
+			margin: 55px 0 0
 .apartments
 	position: relative
 	background: #f4f4f4
