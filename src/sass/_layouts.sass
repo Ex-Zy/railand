@@ -62,6 +62,7 @@
 	position: relative
 	display: flex
 	align-items: center
+	margin: 0 -15px
 	&__link
 		color: $black
 		font-size: 10px
@@ -70,14 +71,30 @@
 		letter-spacing: 0.25px
 		text-transform: uppercase
 		transition: color 0.25s
-		padding: 10px 15px
-		&.is-active,
-		&:hover
-			color: lighten($black, 74%)
+		padding: 10px 0
+		margin: 0 15px
+		position: relative
 		&:first-of-type
 			padding-left: 0
 		&:last-of-type
 			padding-right: 0
+		&:before
+			content: ''
+			z-index: 1
+			display: block	
+			position: absolute
+			bottom: 10px	
+			left: 0	
+			width: 0
+			height: 1px	
+			background: $red
+			transition: width .3s ease-in, background .3s ease-in
+		&:hover,
+		&.is-active
+			color: $red
+			&:before
+				width: 100%	
+
 .form-links
 	+bold
 	color: $black
@@ -92,12 +109,26 @@
 		line-height: 1.4
 		padding: 5px 2px
 		transition: color 0.25s
+		position: relative
 		&:first-of-type
 			padding-left: 0
 		&:last-of-type
 			padding-right: 0
+		&:before
+			content: ''
+			z-index: 1
+			display: block	
+			position: absolute
+			bottom: 5px	
+			left: 0	
+			width: 0
+			height: 1px	
+			background: $red
+			transition: width .3s ease-in, background .3s ease-in
 		&:hover
-			color: lighten($black, 55%)
+			color: $red
+			&:before
+				width: 100%	
 .tselect
 	+bold
 	line-height: 1.2
@@ -119,9 +150,9 @@
 		font-size: inherit
 		line-height: inherit
 		color: inherit
-		transition: opacity 0.25s
+		transition: color 0.25s
 		&:hover
-			opacity: 0.6
+			color: $red
 	&__arrow
 		width: 15px
 		height: 10px
