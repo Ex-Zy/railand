@@ -70,7 +70,7 @@
 		line-height: 1.4
 		letter-spacing: 0.25px
 		text-transform: uppercase
-		transition: color 0.25s
+		transition: color 0.35s
 		padding: 10px 0
 		margin: 0 15px
 		position: relative
@@ -78,22 +78,39 @@
 			padding-left: 0
 		&:last-of-type
 			padding-right: 0
-		&:before
-			content: ''
-			z-index: 1
-			display: block	
+		&:after
+			content: ""
 			position: absolute
-			bottom: 10px	
-			left: 0	
 			width: 0
-			height: 1px	
+			bottom: 10px
+			height: 1px
 			background: $red
-			transition: width .3s ease-in, background .3s ease-in
+			right: 0
+			-webkit-transition: width .3s cubic-bezier(.37,0,.21,1.02)
+			transition: width .35s cubic-bezier(.37,0,.21,1.02)
 		&:hover,
 		&.is-active
 			color: $red
-			&:before
-				width: 100%	
+			&:after
+				left: 0
+				right: auto
+				width: 100%
+		// &:before
+		// 	content: ''
+		// 	z-index: 1
+		// 	display: block	
+		// 	position: absolute
+		// 	bottom: 10px	
+		// 	left: 0	
+		// 	width: 0
+		// 	height: 1px	
+		// 	background: $red
+		// 	transition: width .3s ease-in, background .3s ease-in
+		// &:hover,
+		// &.is-active
+			// color: $red
+			// &:before
+				// width: 100%	
 
 .form-links
 	+bold
@@ -114,21 +131,38 @@
 			padding-left: 0
 		&:last-of-type
 			padding-right: 0
-		&:before
-			content: ''
-			z-index: 1
-			display: block	
+		&:after
+			content: ""
 			position: absolute
-			bottom: 5px	
-			left: 0	
 			width: 0
-			height: 1px	
+			bottom: 5px
+			height: 1px
 			background: $red
-			transition: width .3s ease-in, background .3s ease-in
-		&:hover
+			right: 0
+			-webkit-transition: width .3s cubic-bezier(.37,0,.21,1.02)
+			transition: width .35s cubic-bezier(.37,0,.21,1.02)
+		&:hover,
+		&.is-active
 			color: $red
-			&:before
+			&:after
+				left: 0
+				right: auto
 				width: 100%	
+		// &:before
+		// 	content: ''
+		// 	z-index: 1
+		// 	display: block	
+		// 	position: absolute
+		// 	bottom: 5px	
+		// 	left: 0	
+		// 	width: 0
+		// 	height: 1px	
+		// 	background: $red
+		// 	transition: width .3s ease-in, background .3s ease-in
+		// &:hover
+		// 	color: $red
+		// 	&:before
+		// 		width: 100%	
 .tselect
 	+bold
 	line-height: 1.2
