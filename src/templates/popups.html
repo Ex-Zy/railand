@@ -1,0 +1,26 @@
+---
+title: Example popups
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="inner">
+    <h5>Click on button to show popup</h5>
+    <button type="button" class="btn btn-call-popup" data-popup="login">
+      <span>Call popup (login)</span>
+    </button>
+    <button type="button" class="btn btn-call-popup" data-popup="reset">
+      <span>Call popup (reset)</span>
+    </button>
+    <button type="button" class="btn btn-call-popup" data-popup="order">
+      <span>Call popup (order)</span>
+    </button>
+
+    <button type="button" class="btn btn-call-popup" data-popup="registration">
+      <span>Call popup (registration)</span>
+    </button>
+  </div>
+
+
+{% endblock %}

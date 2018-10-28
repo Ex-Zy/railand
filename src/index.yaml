@@ -3,8 +3,8 @@ ProjectTitle: railand
 PageList:
 - file: page.html
   ready: 100
-- file: example.html
-  ready: 20
+- file: popups.html
+  ready: 100
 - file: faq.html
   ready: 100
 - file: 404.html
@@ -22,10 +22,10 @@ PageList:
 - file: contact.html
   ready: 100
 - file: personal-area.html
-  ready: 50
+  ready: 50ю
 - file: rental-object-card.html
-  ready: 70
+  ready: 100
 - file: villas-card.html
-  ready: 70
+  ready: 100
 - file: object-sale-card.html
-  ready: 70
+  ready: 100
