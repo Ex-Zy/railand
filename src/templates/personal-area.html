@@ -78,16 +78,16 @@ title: Аренда и продажа недвижимости на Пхукет
 									</div>
 								</div>
 							</div>
-							<div class="user__body">	
-								<div class="user__in">	
-									<div class="user__row">	
-										<div class="user__col">	
-											<div class="user__title">	
-												Телефон
+							<form action="#">
+								<div class="user__body">	
+									<div class="user__in">	
+										<div class="user__row">	
+											<div class="user__col">	
+												<div class="user__title">	
+													Телефон
+												</div>
 											</div>
-										</div>
-										<div class="user__col user__col-fl">	
-											<form>
+											<div class="user__col user__col-fl">	
 												<div class="user__fields">	
 													<div class="user__select select-l">
 														<select class="select-l__el">
@@ -103,15 +103,15 @@ title: Аренда и продажа недвижимости на Пхукет
 												</div>
 												<div class="user__checkboxes">
 													<div class="checkbox checkbox_right">
-														<input name="" id="WhatsApp" type="checkbox" class="checkbox__field"/>
+														<input name="WhatsApp" id="WhatsApp" type="checkbox" class="checkbox__field"/>
 														<label for="WhatsApp" class="checkbox__label"><span class="checkbox__title">WhatsApp</span></label>
 													</div>
 													<div class="checkbox checkbox_right">
-														<input name="" id="Viber" type="checkbox" class="checkbox__field"/>
+														<input name="viber" id="Viber" type="checkbox" class="checkbox__field"/>
 														<label for="Viber" class="checkbox__label"><span class="checkbox__title">Viber</span></label>
 													</div>
 													<div class="checkbox checkbox_right">
-														<input name="" id="Telegram" type="checkbox" class="checkbox__field"/>
+														<input name="telegram" id="Telegram" type="checkbox" class="checkbox__field"/>
 														<label for="Telegram" class="checkbox__label"><span class="checkbox__title">Telegram</span></label>
 													</div>
 												</div>
@@ -122,11 +122,11 @@ title: Аренда и продажа недвижимости на Пхукет
 														</span>
 													</button>
 												</div>
-											</form>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>
+								</div> 
+							</form>
 							<div class="user__footer">	
 								<div class="user__in">	
 									<div class="user__row">	
@@ -136,7 +136,7 @@ title: Аренда и продажа недвижимости на Пхукет
 											</div>
 										</div>
 										<div class="user__col user__col-fl">	
-											<form>
+											<form action="#">
 												<div class="user__field">	
 													<input type="text" class="user__input" placeholder="ID объекта"/>
 												</div>
@@ -172,7 +172,7 @@ title: Аренда и продажа недвижимости на Пхукет
 					</div>
 					<div class="object">
 						<ul class="object__list">	
-							<div class="object__item">	
+							<li class="object__item">	
 								<div class="object__catalog">	
 									<div class="object__pic">
 										<img src="img/card/1.jpg" alt="">
@@ -194,8 +194,8 @@ title: Аренда и продажа недвижимости на Пхукет
 										</span>
 									</button>
 								</div>
-							</div>	
-							<div class="object__item">	
+							</li>	
+							<li class="object__item">	
 								<div class="object__catalog">	
 									<div class="object__pic">
 										<img src="img/card/1.jpg" alt="">
@@ -217,7 +217,7 @@ title: Аренда и продажа недвижимости на Пхукет
 										</span>
 									</button>
 								</div>
-							</div>	
+							</li>	
 						</ul>
 					</div>
 				</div>
@@ -253,49 +253,51 @@ title: Аренда и продажа недвижимости на Пхукет
 						</div>
 					</div>
 					<div class="object object-maxw">
-						<div class="user__row">
-							<div class="user__grid-4">
-								<div class="user__title">
-									Введите старый пароль
+						<form action="#">
+							<div class="user__row">
+								<div class="user__grid-4">
+									<div class="user__title">
+										Введите старый пароль
+									</div>
+								</div>
+								<div class="user__grid-6">
+									<div class="user__field">
+										<input type="password" class="user__input" placeholder="Введите старый пароль">
+									</div>
 								</div>
 							</div>
-							<div class="user__grid-6">
-								<div class="user__field">
-									<input type="password" class="user__input" placeholder="Введите старый пароль">
+							<div class="user__row">
+								<div class="user__grid-4">
+									<div class="user__title">
+										Новый пароль
+									</div>
+								</div>
+								<div class="user__grid-6">
+									<div class="user__field">
+										<input type="password" class="user__input" placeholder="Новый пароль">
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="user__row">
-							<div class="user__grid-4">
-								<div class="user__title">
-									Новый пароль
+							<div class="user__row">
+								<div class="user__grid-4">
+									<div class="user__title">
+										Подтвердите пароль
+									</div>
+								</div>
+								<div class="user__grid-6">
+									<div class="user__field">
+										<input type="password" class="user__input" placeholder="Подтвердите пароль">
+									</div>
 								</div>
 							</div>
-							<div class="user__grid-6">
-								<div class="user__field">
-									<input type="password" class="user__input" placeholder="Новый пароль">
+							<div class="user__btns">
+								<div class="user__grid-12">	
+									<button type="submit" class="btn">
+										<span> Изменить пароль </span>
+									</button>
 								</div>
 							</div>
-						</div>
-						<div class="user__row">
-							<div class="user__grid-4">
-								<div class="user__title">
-									Подтвердите пароль
-								</div>
-							</div>
-							<div class="user__grid-6">
-								<div class="user__field">
-									<input type="password" class="user__input" placeholder="Подтвердите пароль">
-								</div>
-							</div>
-						</div>
-						<div class="user__btns">
-							<div class="user__grid-12">	
-								<button type="submit" class="btn">
-									<span> Изменить пароль </span>
-								</button>
-							</div>
-						</div>
+						</form>
 					</div>
 					
 				</div>
