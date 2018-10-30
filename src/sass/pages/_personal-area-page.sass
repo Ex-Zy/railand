@@ -3,7 +3,10 @@
 	background-color: $bg_gray
 	&__in
 		padding-top: 50px	
-		padding-bottom: 25px	
+		padding-bottom: 100px	
+		+xs
+			padding-bottom: 30px
+			padding-top: 30px		
 	&__objects
 		margin-top: 58px	
 		padding-top: 26px	
@@ -12,14 +15,21 @@
 .panel
 	display: flex
 	margin-top: 23px
+	+sm
+		max-width: 480px
+		flex-direction: column
+		margin: 40px auto 0
+		width: 100%	
 	&__tabs
 		display: flex
 		flex-direction: column
-		width: 377px
+		width: 39%
 		font-size: 0
 		justify-content: flex-start	
 		flex-grow: 0
 		flex-shrink: 0
+		+sm
+			width: 100%	
 	&__content
 		display: none
 		flex-direction: column
@@ -33,9 +43,19 @@
 		background-color: $white
 		overflow: hidden
 		padding: 17px 15px 35px 25px
+		+md
+			padding: 17px 15px
+		+xs
+			padding: 10px	
 	&__body
 		padding-left: 43px	
 		padding-right: 49px	
+		+md
+			padding-left: 15px
+			padding-right: 15px
+		+xs
+			padding-left: 10px	
+			padding-right: 10px	
 	&__header
 		border-bottom: 1px solid rgba(#2c2c2c, 0.15)
 		padding-bottom: 14px
@@ -44,6 +64,8 @@
 		align-items: center	
 		.user__title
 			text-transform: uppercase
+			+sm
+				margin-bottom: 0	
 	&__btn
 		background: #eaeaea
 		height: 64px	
@@ -63,6 +85,10 @@
 			transform: scale(1.1)
 			background: transparent
 			transition: transform .25s ease, background .25s ease, box-shadow .25s ease
+			+sm
+				+scale(1)
+				top: 0	
+				left: 0	
 		&:not(:first-child)
 			margin-top: 1px	
 		&.is-active,
@@ -81,17 +107,27 @@
 			text-transform: uppercase
 			line-height: 14px
 
+.panel__header-c
+	justify-content: center
 .user
 	font-size: 14px
 	line-height: 12px
 	&__in
 		padding: 19px 30px
+		+md
+			padding: 15px
+		+xs
+			padding: 10px	
 	&__body,
 	&__footer
 		margin-top: 15px	
 		border: 1px solid rgba(#e0e0e0, 0.5)
 		.user__in
 			padding-right: 87px
+			+md
+				padding-right: 20px	
+			+xs
+				padding-right: 10px	
 		.user__title
 			padding-top: 10px	
 	&__pic
@@ -105,19 +141,29 @@
 		display: flex
 		justify-content: flex-start
 		align-items: flex-start
+		+sm
+			flex-direction: column
 		&:not(:first-child)
 			margin-top: 16px	
 	&__col
 		display: flex
 		flex: 0 1 80%
 		&:first-of-type
-			flex: auto
+			flex: auto	
+		+sm
+			width: 100%	
 	&__title
 		color: $gray
 		font-size: 14px
+		margin-right: 12px	
+		+sm
+			margin-right: 0	
+			margin-bottom: 5px	
 	&__info
 		color: $black
 		+bold
+	&__field
+		width: 100%		
 	&__fields
 		display: flex
 	&__input
@@ -138,11 +184,9 @@
 		.btn
 			font-size: 12px
 			margin-right: 20px	
-		.btn-close
-			position: absolute
-			top: 50%	
-			transform: translateY(-50%)
-			right: 28px	
+			+xs
+				margin-right: 10px	
+				min-width: 180px
 	&__field
 		&:not(:first-child)
 			margin-top: 18px
@@ -171,12 +215,46 @@
 		line-height: 19px
 		display: flex
 		justify-content: flex-start
+		+sm
+			justify-content: center
+			.checkbox_right .checkbox__field:checked+label:after
+    			right: -.33px
+    			left: auto
 		.checkbox
 			&:not(:first-child)
 				margin-left: 40px
+				+xs
+					margin-left: 15px	
 			&__title
 				+bold
 				padding-right: 15px	
+.user__grid-4
+	width: 35%	
+.user__grid-6
+	width: 75%	
+	font-size: 0
+.user__grid-4,
+.user__grid-6
+	+sm
+		width: 100%	
+.user__grid-12
+	width: 100%
+	text-align: center
+	font-size: 0
+	position: relative
+	height: 50px	
+	.btn
+		margin-left: calc(50% - 80px)
+		margin-right: 0	
+		+sm
+			margin-left: 0	
+		// position: absolute
+		// top: 50%	
+		// transform: translateY(-50%)
+		// right: 80px	
+		// margin: 0	
+
+
 .user__col-fl
 	flex-direction: column
 	flex-basis: 73%
@@ -187,3 +265,88 @@
 .user__pic-lg
 	width: 90px
 	height: 90px
+	
+.object
+	padding: 20px 10px
+	&__item
+		padding: 0 5px 20px 5px
+		border-bottom: 1px solid rgba(#e0e0e0, .5)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+sm
+			flex-direction: column
+		+xs
+			padding-bottom: 15px	
+		&:not(:first-child)
+			margin-top: 22px
+	&__pic
+		width: 120px	
+		height: 75px
+		position: relative	
+		overflow: hidden
+		+xs
+			width: 100%	
+			max-width: 218px
+			height: 133px	
+		&:before
+			content: ''
+			z-index: 1
+			+coverdiv
+			background-color: rgba(12, 1, 19, 0.15)
+		img
+			+coverdiv
+			object-fit: cover
+	&__description
+		font-size: 12px
+		margin-top: 9px
+		color: $gray
+		line-height: 16px
+	&__title
+		font-size: 18px
+		+bold	
+		+xs
+			font-size: 16px
+			margin-top: 5px	
+	&__btn
+		min-width: 130px
+		font-size: 12px
+		height: 35px	
+	&__catalog
+		width: calc(100% - 130px)
+		align-items: flex-start	
+		margin-right: 15px
+		+sm
+			margin-right: 0	
+			width: 100%	
+		+xs
+			flex-direction: column
+			align-items: center
+			justify-content: center
+		// +sm
+		// 	flex-direction: column
+		// 	margin-right: 0	
+		// 	width: 100%	
+		// 	align-items: center
+		// 	justify-content: center	
+	&__catalog,
+	&__col
+		display: flex
+	&__col
+		justify-content: flex-end
+		+sm
+			margin-top: 5px	
+	&__content
+		margin-left: 20px
+		line-height: 1
+		+sm
+			margin-left: 23px	
+		+xs
+			margin-left: 0
+			order: 1	
+.object-maxw
+	max-width: 530px
+	padding-top: 39px	
+	+sm
+		padding-top: 20px	
+		max-width: 100%
