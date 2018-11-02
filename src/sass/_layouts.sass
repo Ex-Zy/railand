@@ -1,12 +1,35 @@
+// placeholders
+%logo
+	background: url(../img/logo-red.png) no-repeat center
+	background-size: contain
+	width: 200px
+	height: 50px
+	display: block
+	transition: opacity 0.25s
+	+hide-text
+	&:hover
+		opacity: 0.7
+%header
+	position: fixed
+	z-index: 20
+	top: 0
+	left: 0
+	right: 0
+	background: $white
 .inner
 	max-width: 1140px
 	margin: 0 auto
 	padding: 0 15px
 .out
 	flex-grow: 1
+	padding: 128px 0 0
+	+md
+		padding: 70px 0 0
 /* == Header start == */
 .header
-	position: relative
+	@extend %header
+	+md
+		display: none
 	&__top
 		height: 38px
 		display: flex
@@ -47,22 +70,19 @@
 		+bold
 		letter-spacing: 0.6px
 		margin: 0 0 0 56px
+		+lg
+			margin: 0 0 0 20px
 	&__messengers
 		margin: 0 0 0 10px
 	&__logo
-		background: url(../img/logo-red.png) no-repeat center
-		width: 200px
-		height: 50px
-		display: block
-		transition: opacity 0.25s
-		+hide-text
-		&:hover
-			opacity: 0.7
+		@extend %logo
 .nav
 	position: relative
 	display: flex
 	align-items: center
 	margin: 0 -15px
+	+lg
+		margin: 0 -10px
 	&__link
 		color: $black
 		font-size: 10px
@@ -74,6 +94,8 @@
 		padding: 10px 0
 		margin: 0 15px
 		position: relative
+		+lg
+			margin: 0 10px
 		&:first-of-type
 			padding-left: 0
 		&:last-of-type
@@ -86,7 +108,6 @@
 			height: 1px
 			background: $red
 			right: 0
-			-webkit-transition: width .3s cubic-bezier(.37,0,.21,1.02)
 			transition: width .35s cubic-bezier(.37,0,.21,1.02)
 		&:hover,
 		&.is-active
@@ -95,23 +116,6 @@
 				left: 0
 				right: auto
 				width: 100%
-		// &:before
-		// 	content: ''
-		// 	z-index: 1
-		// 	display: block	
-		// 	position: absolute
-		// 	bottom: 10px	
-		// 	left: 0	
-		// 	width: 0
-		// 	height: 1px	
-		// 	background: $red
-		// 	transition: width .3s ease-in, background .3s ease-in
-		// &:hover,
-		// &.is-active
-			// color: $red
-			// &:before
-				// width: 100%	
-
 .form-links
 	+bold
 	color: $black
@@ -120,7 +124,7 @@
 	display: inline-flex
 	align-items: center
 	&__name
-		text-transform: uppercase	
+		text-transform: uppercase
 	&__item
 		color: inherit
 		font-family: inherit
@@ -149,22 +153,7 @@
 			&:after
 				left: 0
 				right: auto
-				width: 100%	
-		// &:before
-		// 	content: ''
-		// 	z-index: 1
-		// 	display: block	
-		// 	position: absolute
-		// 	bottom: 5px	
-		// 	left: 0	
-		// 	width: 0
-		// 	height: 1px	
-		// 	background: $red
-		// 	transition: width .3s ease-in, background .3s ease-in
-		// &:hover
-		// 	color: $red
-		// 	&:before
-		// 		width: 100%	
+				width: 100%
 .tselect
 	+bold
 	line-height: 1.2
@@ -310,6 +299,261 @@
 		display: block
 /* == Header end == */
 
+/* == Header Tablet/Mobile start == */
+.header-mob
+	@extend %header
+	display: none
+	+md
+		display: block
+	&.is-drop-menu
+		.header-mob__drop
+			transform: translate(0, 0)
+	+md
+		display: block
+	&__top
+		position: relative
+		z-index: 1
+		background: $white
+		box-shadow: 0 0 16px rgba(24, 21, 26, 0.38)
+	&__drop
+		transition: transform 0.3s ease-in-out
+		transform: translate(0, -200%)
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		background: $white
+		padding: 30px 0
+		box-shadow: 0 3px 19px rgba(0, 0, 0, 0.25)
+		max-height: 80vh
+		overflow: auto
+	&__logo
+		@extend %logo
+		height: 25px
+		width: 100px
+		+xss
+			width: 80px
+	&__top-in
+		display: flex
+		align-items: center
+		height: 70px
+		padding: 0 20px
+	&__drop-in
+		padding: 0 20px
+	&__feedback
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin: 0 -20px
+		padding: 10px 20px
+	&__nav
+		display: flex
+		flex-direction: column
+	&__nav-link
+		padding: 10px 0
+		text-transform: uppercase
+		font-size: 14px
+		transition: color 0.25s
+		letter-spacing: 0.1em
+		+bold
+		&:not(:first-of-type)
+			margin: 6px 0 0
+		&:hover,
+		&.is-active
+			color: $red
+	&__btn
+		letter-spacing: 0.07em
+		min-width: 100px
+	.messengers
+		&__item
+			margin: 0 22px 0 0
+			&:last-of-type
+				margin: 0
+.form-buttons
+	position: relative
+	display: flex
+	margin: 36px -20px 0
+	&__item
+		width: 50%
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: #000
+		position: relative
+		color: $white
+		font-weight: 400
+		font-size: 14px
+		+bold
+		letter-spacing: 1.4px
+		transition: background 0.25s
+		&:hover,
+		&:focus
+			background: lighten(#000, 15%)
+		&_red
+			background: $red
+			&:hover,
+			&:focus
+				background: lighten($red, 3%)
+
+.btn-burger
+	+hide-text
+	margin: auto -10px auto auto
+	width: 48px
+	height: 36px
+	position: relative
+	display: flex
+	align-items: center
+	transition: transform 0.3s
+	background: none
+	cursor: pointer
+	padding: 10px
+	&.is-active
+		+rotate(90)
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 10px
+		left: 10px
+		height: 2px
+		width: calc(100% - 20px)
+		background: $red
+	&:after
+		top: auto
+		bottom: 10px
+	span
+		display: block
+		position: absolute
+		height: 2px
+		width: calc(100% - 20px)
+		background: $red
+
+.tselect-mob
+	+bold
+	line-height: 1.2
+	color: #000000
+	font-size: 16px
+	text-transform: uppercase
+	letter-spacing: 0.9px
+	height: 100%
+	display: inline-flex
+	align-items: center
+	margin: 0 0 0 20px
+	position: relative
+	+xss
+		font-size: 12px
+	&.is-active
+		.tselect-mob__list
+			display: block
+		.tselect-mob__current
+			&:after
+				+rotate(180)
+	&__current
+		padding: 10px 20px 0 0
+		position: relative
+		+xss
+			padding: 5px 20px 0 0
+	&__current-link
+		font-family: inherit
+		font-size: inherit
+		line-height: inherit
+		color: inherit
+		transition: color 0.25s
+		&:hover
+			color: $red
+	&__arrow
+		width: 15px
+		height: 10px
+		position: absolute
+		top: 14px
+		right: 0
+		cursor: pointer
+		+xss
+			top: 7px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			+vcenter
+			+arr(9, 4, $black, b)
+	&__list
+		position: absolute
+		top: 100%
+		margin: -20px 0 0
+		left: 0
+		z-index: 10
+		display: none
+	&__item
+		cursor: pointer
+		transition: color 0.25s
+		padding: 4px 0 0
+		&:hover
+			color: $red
+.select-mob
+	position: relative
+	margin: 0 -20px
+	+ .select-mob
+		margin: 2px -20px 0
+	&.is-active
+		.select-mob__list
+			display: block
+		.select-mob__current
+			&:after
+				+rotate(180)
+	&__current
+		position: relative
+		padding: 0 20px
+		cursor: pointer
+		display: flex
+		align-items: center
+		font-size: 14px
+		+bold
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		background: #f3f3f3
+		height: 46px
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			+arr(9, 4, $black, b)
+			top: 0
+			bottom: 0
+			right: 22px
+			margin: auto
+			transition: transform 0.25s
+		span
+			display: block
+			margin: 0 0 0 10px
+	&__list
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		display: none
+		z-index: 10
+	&__item
+		cursor: pointer
+		position: relative
+		padding: 0 20px
+		display: flex
+		align-items: center
+		font-size: 14px
+		+bold
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		background: #f3f3f3
+		transition: background 0.3s
+		height: 46px
+		&:hover,
+		&:focus
+			background: darken(#f3f3f3, 3%)
+	img
+		display: block
+/* == Header Tablet/Mobile end == */
+
 /* == Footer start == */
 .footer
 	position: relative
@@ -366,7 +610,7 @@
 		display: flex
 		width: calc(100% - 140px)
 		+xs
-			width: 100%	
+			width: 100%
 			flex-direction: column
 			align-items: center
 			justify-content: center
@@ -382,9 +626,6 @@
 		transition: opacity 0.25s
 		+hide-text
 		background-size: contain
-		// +xs
-		// 	width: 199px
-		// 	height: 57px	
 		&:hover
 			opacity: 0.7
 .fnav
@@ -408,7 +649,7 @@
 		+xs
 			font-size: 13px
 			padding: 3px 26px
-			padding-right: 0	
+			padding-right: 0
 		&:hover
 			color: darken(#818181, 45%)
 		&:before
