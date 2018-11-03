@@ -6,6 +6,8 @@
 		height: 450px
 		width: 100%
 		position: relative
+		+sm
+			height: 320px
 		img
 			position: absolute
 			width: 100%
@@ -57,6 +59,8 @@
 		outline: 0
 		transition: outline 0.25s
 		cursor: pointer
+		+sm
+			height: 60px
 		&:after
 			content: ''
 			display: block
@@ -86,12 +90,16 @@
 	justify-content: space-between
 	align-items: center
 	padding: 23px 10px 12px
+	+sm
+		padding: 23px 0 12px
 	&__name
 		letter-spacing: 0.7px
 		text-transform: uppercase
 		+regular
 		font-size: 14px
 		line-height: 1.2
+		+sm
+			font-size: 12px
 .breadcrumb
 	position: relative
 	display: flex
@@ -123,6 +131,7 @@
 	padding: 0
 	&__title
 		position: relative
+		margin: 20px 0 0
 		&:after
 			content: ''
 			display: block
@@ -137,16 +146,22 @@
 	position: relative
 	display: flex
 	margin: 30px -15px 0
+	+sm
+		flex-direction: column-reverse
 	&__left
 		width: calc(100% - 285px)
 		padding: 0 15px
 		flex-grow: 0
 		flex-shrink: 1
+		+sm
+			width: 100%
 	&__right
 		width: 285px
 		flex-grow: 0
 		flex-shrink: 1
 		padding: 0 15px
+		+sm
+			width: 100%
 	&__title
 		letter-spacing: 1.8px
 		text-transform: uppercase
@@ -239,11 +254,18 @@
 .resembling-list
 	display: flex
 	margin: 20px -15px 0
+	flex-wrap: wrap
 	&__item
 		padding: 0 15px
 		width: 50%
 		flex-grow: 0
 		flex-shrink: 0
+		+sm
+			width: 100%
+		&:not(:first-of-type)
+			+sm
+				margin-top: 24px
+
 .info-object
 	background: $white
 	margin: 0 0 30px
@@ -294,7 +316,7 @@
 			max-height: 0
 			+tr(max-height .3s ease-in)
 			img
-				width: 100%	
+				width: 100%
 
 .options
 	position: relative
@@ -314,7 +336,7 @@
 		width: 100%
 		display: block
 .options__bottom-rent
-	border-top: 0	
+	border-top: 0
 	padding: 20px 0	0
 .options-list
 	color: $gray
@@ -324,7 +346,7 @@
 	letter-spacing: 0.35px
 	margin: 20px 0
 	&__object
-		margin: 0	
+		margin: 0
 	&__title
 		margin: 15px 0 0
 		&:first-of-type
@@ -341,23 +363,23 @@
 	    line-height: 1.2
 	    letter-spacing: .35px
 	    +regular
-	    padding-left: 11px	
+	    padding-left: 11px
 	    margin: 20px 0 10px 0
 	&__row
 		display: flex
 		justify-content: space-between
-		align-items: center	
+		align-items: center
 		position: relative
-		padding: 10px	
+		padding: 10px
 		background-color: #f3f3f3
 		.icon-arr
 			+vcenter
 			font-size: 4px
-	&__select			
-		width: 100%	
+	&__select
+		width: 100%
 	&__price
 		display: flex
-		justify-content: space-between	
+		justify-content: space-between
 		+bold
 		font-size: 18px
 		margin: 20px 0
