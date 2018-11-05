@@ -8,8 +8,8 @@
             <i class="tselect__arrow"></i>
           </div>
           <ul class="tselect__list">
-            <li class="tselect__item">+ 66 81 737 1687</li>
-            <li class="tselect__item">+ 66 81 737 1687</li>
+            <li class="tselect__item">+ 66 81 737 1688</li>
+            <li class="tselect__item">+ 66 81 737 1689</li>
           </ul>
         </div>
         <ul class="header__messengers messengers">
@@ -42,11 +42,25 @@
             <li class="pselect__item">&#8364; eur</li>
           </ul>
         </div>
+
+        {% if authorized -%}
+        <div class="form-links">
+          <div class="user__pic user__pic-xss">
+            <img src="https://via.placeholder.com/18x18" alt="Наташа">
+          </div>
+          <div href="#" class="form-links__item form-links__name">Наташа</div>
+          <div class="form-links__separator">|</div>
+          <a href="#" class="form-links__item">Вийти</a>
+        </div>
+
+        {% else -%}
         <div class="form-links">
           <a href="#" class="form-links__item btn-call-popup" data-popup="registration">Регистрация</a>
           <div class="form-links__separator">|</div>
           <a href="#" class="form-links__item btn-call-popup" data-popup="login">Войти</a>
         </div>
+        {%- endif %}
+
       </div>
     </div>
     <div class="header__bottom">

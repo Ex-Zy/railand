@@ -1,5 +1,6 @@
 ---
 title: Аренда и продажа недвижимости на Пхукете
+authorized: true
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -7,15 +8,15 @@ title: Аренда и продажа недвижимости на Пхукет
 
 <!-- BEGIN personal-area -->
 
-<section class="personal-area">	
-	<div class="personal-area__in inner">	
-		<h2 class="title-secondary">	
+<section class="personal-area">
+	<div class="personal-area__in inner">
+		<h2 class="title-secondary">
 			Личный кабинет
 		</h2>
 		<!-- BEGIN panel -->
 
-		<div class="panel">	
-			<div class="panel__tabs">	
+		<div class="panel">
+			<div class="panel__tabs">
 				<button type="button" class="panel__btn js-tab is-active" data-tab="0">
 					<span>Профиль</span>
 				</button>
@@ -30,7 +31,7 @@ title: Аренда и продажа недвижимости на Пхукет
 				</button>
 			</div>
 			<div class="panel__main">
-				<div class="panel__content js-content is-active" data-tab="0">	
+				<div class="panel__content js-content is-active" data-tab="0">
 					<div class="panel__header">
 						<div class="user__pic user__pic-sm">
 							<img src="https://via.placeholder.com/36x36" alt="Наташа"/>
@@ -39,56 +40,56 @@ title: Аренда и продажа недвижимости на Пхукет
 							Наташа
 						</div>
 					</div>
-					<div class="panel__body">	
-						<div class="user">	
-							<div class="user__header">	
-								<div class="user__in">	
-									<div class="user__pic user__pic-lg">	
+					<div class="panel__body">
+						<div class="user">
+							<div class="user__header">
+								<div class="user__in">
+									<div class="user__pic user__pic-lg">
 										<img src="https://via.placeholder.com/90x90" alt="Наташа"/>
 									</div>
 									<div class="user__row">
-										<div class="user__col">	
-											<div class="user__title">Имя	
+										<div class="user__col">
+											<div class="user__title">Имя
 											</div>
 										</div>
-										<div class="user__col">		
-											<div class="user__info">Наташа	
-											</div>
-										</div>
-									</div>		
-									<div class="user__row">
-										<div class="user__col">	
-											<div class="user__title">Email	
-											</div>
-										</div>
-										<div class="user__col">		
-											<div class="user__info">natasha.rostova@gmail.com	
+										<div class="user__col">
+											<div class="user__info">Наташа
 											</div>
 										</div>
 									</div>
 									<div class="user__row">
-										<div class="user__col">	
-											<div class="user__title">Статус	
+										<div class="user__col">
+											<div class="user__title">Email
 											</div>
 										</div>
-										<div class="user__col">		
-											<div class="user__info">Владелец	
+										<div class="user__col">
+											<div class="user__info">natasha.rostova@gmail.com
+											</div>
+										</div>
+									</div>
+									<div class="user__row">
+										<div class="user__col">
+											<div class="user__title">Статус
+											</div>
+										</div>
+										<div class="user__col">
+											<div class="user__info">Владелец
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<form action="#">
-								<div class="user__body">	
-									<div class="user__in">	
-										<div class="user__row">	
-											<div class="user__col">	
-												<div class="user__title">	
+								<div class="user__body">
+									<div class="user__in">
+										<div class="user__row">
+											<div class="user__col">
+												<div class="user__title">
 													Телефон
 												</div>
 											</div>
-											<div class="user__col user__col-fl">	
-												<div class="user__fields">	
+											<div class="user__col user__col-fl">
+												<div class="user__fields">
 													<div class="user__select select-l">
 														<select class="select-l__el">
 															<option value="" selected="selected">
@@ -98,7 +99,7 @@ title: Аренда и продажа недвижимости на Пхукет
 															<option value="2">+380</option>
 															<option value="3">+380</option>
 														</select>
-													</div>	
+													</div>
 													<input type="text" class="user__input" placeholder="Ваш номер"/>
 												</div>
 												<div class="user__checkboxes">
@@ -115,9 +116,9 @@ title: Аренда и продажа недвижимости на Пхукет
 														<label for="Telegram" class="checkbox__label"><span class="checkbox__title">Telegram</span></label>
 													</div>
 												</div>
-												<div class="user__btns">	
-													<button type="submit" class="user__btn">	
-														<span>	
+												<div class="user__btns">
+													<button type="submit" class="user__btn">
+														<span>
 															Сохранить
 														</span>
 													</button>
@@ -125,22 +126,22 @@ title: Аренда и продажа недвижимости на Пхукет
 											</div>
 										</div>
 									</div>
-								</div> 
+								</div>
 							</form>
-							<div class="user__footer">	
-								<div class="user__in">	
-									<div class="user__row">	
-										<div class="user__col">	
-											<div class="user__title">	
+							<div class="user__footer">
+								<div class="user__in">
+									<div class="user__row">
+										<div class="user__col">
+											<div class="user__title">
 												Добавить объект
 											</div>
 										</div>
-										<div class="user__col user__col-fl">	
+										<div class="user__col user__col-fl">
 											<form action="#">
-												<div class="user__field">	
+												<div class="user__field">
 													<input type="text" class="user__input" placeholder="ID объекта"/>
 												</div>
-												<div class="user__field">	
+												<div class="user__field">
 													<input type="text" class="user__input" placeholder="Название объекта"/>
 												</div>
 												<div class="user__btns">
@@ -161,7 +162,7 @@ title: Аренда и продажа недвижимости на Пхукет
 						</div>
 					</div>
 				</div>
-				<div class="panel__content js-content" data-tab="1">	
+				<div class="panel__content js-content" data-tab="1">
 					<div class="panel__header panel__header-c">
 						<div class="user__pic user__pic-sm">
 							<img src="https://via.placeholder.com/36x36" alt="Наташа"/>
@@ -171,57 +172,57 @@ title: Аренда и продажа недвижимости на Пхукет
 						</div>
 					</div>
 					<div class="object">
-						<ul class="object__list">	
-							<li class="object__item">	
-								<div class="object__catalog">	
+						<ul class="object__list">
+							<li class="object__item">
+								<div class="object__catalog">
 									<div class="object__pic">
 										<img src="img/card/1.jpg" alt="">
 									</div>
 									<div class="object__content">
 										<h3 class="object__title">
 										Резиденция  в Laguna Phuket	</h3>
-										<ul class="object__description">	
+										<ul class="object__description">
 											<li>Жилая площадь: от 200 м2 </li>
 											<li>Спален: 2 </li>
 											<li>До пляжа: 600 м	</li>
 										</ul>
 									</div>
 								</div>
-								<div class="object__col">	
+								<div class="object__col">
 									<button type="button" class="object__btn btn btn_primary">
 										<span>
-											Смотреть   	
+											Смотреть
 										</span>
 									</button>
 								</div>
-							</li>	
-							<li class="object__item">	
-								<div class="object__catalog">	
+							</li>
+							<li class="object__item">
+								<div class="object__catalog">
 									<div class="object__pic">
 										<img src="img/card/1.jpg" alt="">
 									</div>
 									<div class="object__content">
 										<h3 class="object__title">
 										Резиденция  в Laguna Phuket	</h3>
-										<ul class="object__description">	
+										<ul class="object__description">
 											<li>Жилая площадь: от 200 м2 </li>
 											<li>Спален: 2 </li>
 											<li>До пляжа: 600 м	</li>
 										</ul>
 									</div>
 								</div>
-								<div class="object__col">	
+								<div class="object__col">
 									<button type="button" class="object__btn btn btn_primary">
 										<span>
-											Смотреть   	
+											Смотреть
 										</span>
 									</button>
 								</div>
-							</li>	
+							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="panel__content js-content" data-tab="2">	
+				<div class="panel__content js-content" data-tab="2">
 					<div class="panel__header panel__header-c">
 						<div class="user__pic user__pic-sm">
 							<img src="https://via.placeholder.com/36x36" alt="Наташа"/>
@@ -230,7 +231,7 @@ title: Аренда и продажа недвижимости на Пхукет
 							Наташа
 						</div>
 					</div>
-					<div class="object">	
+					<div class="object">
 						<dl class="options-list options-list__object">
 							<dt class="options-list__title">Логин:</dt>
 							<dd class="options-list__description">Larchik88</dd>
@@ -243,7 +244,7 @@ title: Аренда и продажа недвижимости на Пхукет
 						</dl>
 					</div>
 				</div>
-				<div class="panel__content js-content" data-tab="3">	
+				<div class="panel__content js-content" data-tab="3">
 					<div class="panel__header panel__header-c">
 						<div class="user__pic user__pic-sm">
 							<img src="https://via.placeholder.com/36x36" alt="Наташа"/>
@@ -291,7 +292,7 @@ title: Аренда и продажа недвижимости на Пхукет
 								</div>
 							</div>
 							<div class="user__btns">
-								<div class="user__grid-12">	
+								<div class="user__grid-12">
 									<button type="submit" class="btn">
 										<span> Изменить пароль </span>
 									</button>
@@ -299,14 +300,14 @@ title: Аренда и продажа недвижимости на Пхукет
 							</div>
 						</form>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
 		<!-- BEGIN panel -->
 
 		<!-- BEGIN objects -->
-		<div class="personal-area__objects">	
+		<div class="personal-area__objects">
 			<h2 class="title-secondary">
 				Список добавленных обьектов
 			</h2>

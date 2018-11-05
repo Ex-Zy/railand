@@ -123,8 +123,6 @@
 	letter-spacing: 0.6px
 	display: inline-flex
 	align-items: center
-	&__name
-		text-transform: uppercase
 	&__item
 		color: inherit
 		font-family: inherit
@@ -145,7 +143,6 @@
 			height: 1px
 			background: $red
 			right: 0
-			-webkit-transition: width .3s cubic-bezier(.37,0,.21,1.02)
 			transition: width .35s cubic-bezier(.37,0,.21,1.02)
 		&:hover,
 		&.is-active
@@ -154,6 +151,12 @@
 				left: 0
 				right: auto
 				width: 100%
+	&__name
+		text-transform: uppercase
+		&:after
+			display: none
+		&:hover
+			color: $black
 .tselect
 	+bold
 	line-height: 1.2
@@ -202,9 +205,9 @@
 		display: none
 	&__item
 		cursor: pointer
-		transition: opacity 0.25s
+		transition: color 0.25s
 		&:hover
-			opacity: 0.6
+			color: $red
 .messengers
 	+hide-text
 	display: inline-flex
@@ -272,6 +275,9 @@
 	&.is-active
 		.cselect__list
 			display: block
+		.cselect__current
+			&:after
+				+rotate(-180)
 	&__current
 		position: relative
 		padding: 0 20px 0 0
