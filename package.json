@@ -71,6 +71,7 @@
   "dependencies": {
     "element-closest": "^2.0.2",
     "ion-rangeslider": "^2.2.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9"
   }
 }
