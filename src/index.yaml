@@ -22,7 +22,7 @@ PageList:
 - file: contact.html
   ready: 100
 - file: personal-area.html
-  ready: 50ю
+  ready: 100
 - file: rental-object-card.html
   ready: 100
 - file: villas-card.html
