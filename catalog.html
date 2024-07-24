@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
 
   <head>
     <meta charset="utf-8">
@@ -21,12 +21,12 @@
             <div class="header__top-left">
               <div class="tselect">
                 <div class="tselect__current">
-                  <a href="tel:+ 66 81 737 1687" class="tselect__current-link">+ 66 81 737 1687</a>
+                  <a href="tel:66817371687" class="tselect__current-link">+ 66 81 737 1687</a>
                   <i class="tselect__arrow"></i>
                 </div>
                 <ul class="tselect__list">
-                  <li class="tselect__item">+ 66 81 737 1687</li>
-                  <li class="tselect__item">+ 66 81 737 1687</li>
+                  <li class="tselect__item">+ 66 81 737 1688</li>
+                  <li class="tselect__item">+ 66 81 737 1689</li>
                 </ul>
               </div>
               <ul class="header__messengers messengers">
@@ -91,9 +91,78 @@
           </div>
         </div>
       </header>
+      <!--  TABLET/MOBILE HEADER -->
+      <header class="header-mob">
+        <div class="header-mob__top">
+          <div class="header-mob__top-in inner">
+            <a href="#" class="header-mob__logo">Raйland</a>
+            <div class="tselect-mob">
+              <div class="tselect-mob__current">
+                <a href="tel:66817371687" class="tselect-mob__current-link">+ 66 81 737 1687</a>
+                <i class="tselect-mob__arrow"></i>
+              </div>
+              <ul class="tselect-mob__list">
+                <li class="tselect-mob__item">+ 66 81 737 1687</li>
+                <li class="tselect-mob__item">+ 66 81 737 1687</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-burger js-menu"><span>Menu</span></button>
+          </div>
+        </div>
+        <div class="header-mob__drop">
+          <div class="header-mob__drop-in inner">
+            <nav class="header-mob__nav">
+              <a href="#" class="header-mob__nav-link is-active">Главная</a>
+              <a href="#" class="header-mob__nav-link">Недвижимость</a>
+              <a href="#" class="header-mob__nav-link">Владельцам</a>
+              <a href="#" class="header-mob__nav-link">Жизнь на Пхукете</a>
+              <a href="#" class="header-mob__nav-link">FAQ</a>
+              <a href="#" class="header-mob__nav-link">О нас</a>
+              <a href="#" class="header-mob__nav-link">Контакты</a>
+              <a href="#" class="header-mob__nav-link">Other</a>
+            </nav>
+            <div class="select-mob">
+              <div class="select-mob__current"> ЯЗЫК <span><img src="img/rus.svg" width="23" height="15" alt="Russian flag"></span>
+              </div>
+              <ul class="select-mob__list">
+                <li class="select-mob__item"><img src="img/gbr.svg" width="23" height="15" alt="Great Britain flag"></li>
+              </ul>
+            </div>
+            <div class="select-mob">
+              <div class="select-mob__current">Валюта <span>$</span></div>
+              <ul class="select-mob__list">
+                <li class="select-mob__item">&#8381; rub</li>
+                <li class="select-mob__item">&#3647; thb</li>
+                <li class="select-mob__item">$ usd</li>
+                <li class="select-mob__item">&#8364; eur</li>
+              </ul>
+            </div>
+            <div class="header-mob__feedback">
+              <ul class="header-mob__messengers messengers">
+                <li class="messengers__item">
+                  <a href="https://wa.me/+66817371687'" class="messengers__links messengers__whatsapp"></a>
+                </li>
+                <li class="messengers__item">
+                  <a href="viber://add?number=+66817371687" class="messengers__links messengers__viber"></a>
+                </li>
+                <li class="messengers__item">
+                  <a href="tg://resolve?domain=nikname" class="messengers__links messengers__telegram"></a>
+                </li>
+              </ul>
+              <button type="button" class="header-mob__btn btn btn_primary">
+                <span>Заполнить заявку</span>
+              </button>
+            </div>
+            <div class="form-buttons">
+              <button class="form-buttons__item btn-call-popup" data-popup="registration"><span>Регистрация</span></button>
+              <button class="form-buttons__item form-buttons__item_red btn-call-popup" data-popup="login"><span>Войти</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
       <!-- END header -->
       <!-- BEGIN catalog-promo -->
-      <section class="catalog-promo" style="background-image: url(img/about/about-form.jpg">
+      <section class="catalog-promo" style="background-image: url(img/about/about-form.jpg)">
         <div class="catalog-promo__in inner">
           <h2 class="catalog-promo__title"> Более 700 обьектов в базе </h2>
           <div class="catalog-promo__subtitle"> Чтобы изучить весь каталог, потребуется примерно 48 часов. <br /> Оставьте заявку, и менеджер быстро подберет варианты. </div>
@@ -127,6 +196,7 @@
               <button type="button" class="tab-links__item js-tab" data-tab="1"><span>Аренду</span></button>
             </div>
           </div>
+          <!-- BEGIN cards-main -->
           <!-- BEGIN cards-main -->
           <div class="cards__main">
             <div class="cards-sort">
@@ -920,7 +990,6 @@
           </div>
         </div>
       </div>
-      </div>
       <div class="footer__bottom">
         <div class="footer__bottom-in inner">
           <div class="footer__bottom-left">
@@ -994,7 +1063,7 @@
               <!-- BEGIN popup-body -->
               <div class="popup__body">
                 <div class="form__row">
-                  <input type="text" class="form__field" placeholder="Введите ваше имя">
+                  <input type="email" class="form__field" placeholder="Введите ваш email">
                 </div>
                 <div class="form__row">
                   <input type="password" class="form__field" placeholder="Введите ваш пароль">
@@ -1005,7 +1074,7 @@
               <div class="popup__footer">
                 <div class="popup__checkbox">
                   <div class="checkbox">
-                    <input name="" id="remember" type="checkbox" class="checkbox__field">
+                    <input name="remember" id="remember" type="checkbox" class="checkbox__field">
                     <label for="remember" class="checkbox__label"><span class="checkbox__title">Запомнить меня</span></label>
                   </div>
                 </div>

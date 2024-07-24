@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
 
   <head>
     <meta charset="utf-8">
@@ -21,12 +21,12 @@
             <div class="header__top-left">
               <div class="tselect">
                 <div class="tselect__current">
-                  <a href="tel:+ 66 81 737 1687" class="tselect__current-link">+ 66 81 737 1687</a>
+                  <a href="tel:66817371687" class="tselect__current-link">+ 66 81 737 1687</a>
                   <i class="tselect__arrow"></i>
                 </div>
                 <ul class="tselect__list">
-                  <li class="tselect__item">+ 66 81 737 1687</li>
-                  <li class="tselect__item">+ 66 81 737 1687</li>
+                  <li class="tselect__item">+ 66 81 737 1688</li>
+                  <li class="tselect__item">+ 66 81 737 1689</li>
                 </ul>
               </div>
               <ul class="header__messengers messengers">
@@ -60,9 +60,12 @@
                 </ul>
               </div>
               <div class="form-links">
-                <a href="#" class="form-links__item btn-call-popup" data-popup="registration">Регистрация</a>
+                <div class="user__pic user__pic-xss">
+                  <img src="https://via.placeholder.com/18x18" alt="Наташа">
+                </div>
+                <div href="#" class="form-links__item form-links__name">Наташа</div>
                 <div class="form-links__separator">|</div>
-                <a href="#" class="form-links__item btn-call-popup" data-popup="login">Войти</a>
+                <a href="#" class="form-links__item">Вийти</a>
               </div>
             </div>
           </div>
@@ -87,6 +90,75 @@
               <button type="button" class="header__btn btn btn_primary">
                 <span>Заполнить заявку</span>
               </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--  TABLET/MOBILE HEADER -->
+      <header class="header-mob">
+        <div class="header-mob__top">
+          <div class="header-mob__top-in inner">
+            <a href="#" class="header-mob__logo">Raйland</a>
+            <div class="tselect-mob">
+              <div class="tselect-mob__current">
+                <a href="tel:66817371687" class="tselect-mob__current-link">+ 66 81 737 1687</a>
+                <i class="tselect-mob__arrow"></i>
+              </div>
+              <ul class="tselect-mob__list">
+                <li class="tselect-mob__item">+ 66 81 737 1687</li>
+                <li class="tselect-mob__item">+ 66 81 737 1687</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-burger js-menu"><span>Menu</span></button>
+          </div>
+        </div>
+        <div class="header-mob__drop">
+          <div class="header-mob__drop-in inner">
+            <nav class="header-mob__nav">
+              <a href="#" class="header-mob__nav-link is-active">Главная</a>
+              <a href="#" class="header-mob__nav-link">Недвижимость</a>
+              <a href="#" class="header-mob__nav-link">Владельцам</a>
+              <a href="#" class="header-mob__nav-link">Жизнь на Пхукете</a>
+              <a href="#" class="header-mob__nav-link">FAQ</a>
+              <a href="#" class="header-mob__nav-link">О нас</a>
+              <a href="#" class="header-mob__nav-link">Контакты</a>
+              <a href="#" class="header-mob__nav-link">Other</a>
+            </nav>
+            <div class="select-mob">
+              <div class="select-mob__current"> ЯЗЫК <span><img src="img/rus.svg" width="23" height="15" alt="Russian flag"></span>
+              </div>
+              <ul class="select-mob__list">
+                <li class="select-mob__item"><img src="img/gbr.svg" width="23" height="15" alt="Great Britain flag"></li>
+              </ul>
+            </div>
+            <div class="select-mob">
+              <div class="select-mob__current">Валюта <span>$</span></div>
+              <ul class="select-mob__list">
+                <li class="select-mob__item">&#8381; rub</li>
+                <li class="select-mob__item">&#3647; thb</li>
+                <li class="select-mob__item">$ usd</li>
+                <li class="select-mob__item">&#8364; eur</li>
+              </ul>
+            </div>
+            <div class="header-mob__feedback">
+              <ul class="header-mob__messengers messengers">
+                <li class="messengers__item">
+                  <a href="https://wa.me/+66817371687'" class="messengers__links messengers__whatsapp"></a>
+                </li>
+                <li class="messengers__item">
+                  <a href="viber://add?number=+66817371687" class="messengers__links messengers__viber"></a>
+                </li>
+                <li class="messengers__item">
+                  <a href="tg://resolve?domain=nikname" class="messengers__links messengers__telegram"></a>
+                </li>
+              </ul>
+              <button type="button" class="header-mob__btn btn btn_primary">
+                <span>Заполнить заявку</span>
+              </button>
+            </div>
+            <div class="form-buttons">
+              <button class="form-buttons__item btn-call-popup" data-popup="registration"><span>Регистрация</span></button>
+              <button class="form-buttons__item form-buttons__item_red btn-call-popup" data-popup="login"><span>Войти</span></button>
             </div>
           </div>
         </div>
@@ -153,14 +225,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="user__body">
-                      <div class="user__in">
-                        <div class="user__row">
-                          <div class="user__col">
-                            <div class="user__title"> Телефон </div>
-                          </div>
-                          <div class="user__col user__col-fl">
-                            <form>
+                    <form action="#">
+                      <div class="user__body">
+                        <div class="user__in">
+                          <div class="user__row">
+                            <div class="user__col">
+                              <div class="user__title"> Телефон </div>
+                            </div>
+                            <div class="user__col user__col-fl">
                               <div class="user__fields">
                                 <div class="user__select select-l">
                                   <select class="select-l__el">
@@ -174,15 +246,15 @@
                               </div>
                               <div class="user__checkboxes">
                                 <div class="checkbox checkbox_right">
-                                  <input name="" id="WhatsApp" type="checkbox" class="checkbox__field" />
+                                  <input name="WhatsApp" id="WhatsApp" type="checkbox" class="checkbox__field" />
                                   <label for="WhatsApp" class="checkbox__label"><span class="checkbox__title">WhatsApp</span></label>
                                 </div>
                                 <div class="checkbox checkbox_right">
-                                  <input name="" id="Viber" type="checkbox" class="checkbox__field" />
+                                  <input name="viber" id="Viber" type="checkbox" class="checkbox__field" />
                                   <label for="Viber" class="checkbox__label"><span class="checkbox__title">Viber</span></label>
                                 </div>
                                 <div class="checkbox checkbox_right">
-                                  <input name="" id="Telegram" type="checkbox" class="checkbox__field" />
+                                  <input name="telegram" id="Telegram" type="checkbox" class="checkbox__field" />
                                   <label for="Telegram" class="checkbox__label"><span class="checkbox__title">Telegram</span></label>
                                 </div>
                               </div>
@@ -191,11 +263,11 @@
                                   <span> Сохранить </span>
                                 </button>
                               </div>
-                            </form>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </form>
                     <div class="user__footer">
                       <div class="user__in">
                         <div class="user__row">
@@ -203,7 +275,7 @@
                             <div class="user__title"> Добавить объект </div>
                           </div>
                           <div class="user__col user__col-fl">
-                            <form>
+                            <form action="#">
                               <div class="user__field">
                                 <input type="text" class="user__input" placeholder="ID объекта" />
                               </div>
@@ -229,27 +301,124 @@
                 </div>
               </div>
               <div class="panel__content js-content" data-tab="1">
-                <div class="panel__header">
+                <div class="panel__header panel__header-c">
                   <div class="user__pic user__pic-sm">
                     <img src="https://via.placeholder.com/36x36" alt="Наташа" />
                   </div>
                   <div class="user__title"> Наташа </div>
                 </div>
+                <div class="object">
+                  <ul class="object__list">
+                    <li class="object__item">
+                      <div class="object__catalog">
+                        <div class="object__pic">
+                          <img src="img/card/1.jpg" alt="">
+                        </div>
+                        <div class="object__content">
+                          <h3 class="object__title"> Резиденция в Laguna Phuket </h3>
+                          <ul class="object__description">
+                            <li>Жилая площадь: от 200 м2 </li>
+                            <li>Спален: 2 </li>
+                            <li>До пляжа: 600 м </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="object__col">
+                        <button type="button" class="object__btn btn btn_primary">
+                          <span> Смотреть </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="object__item">
+                      <div class="object__catalog">
+                        <div class="object__pic">
+                          <img src="img/card/1.jpg" alt="">
+                        </div>
+                        <div class="object__content">
+                          <h3 class="object__title"> Резиденция в Laguna Phuket </h3>
+                          <ul class="object__description">
+                            <li>Жилая площадь: от 200 м2 </li>
+                            <li>Спален: 2 </li>
+                            <li>До пляжа: 600 м </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="object__col">
+                        <button type="button" class="object__btn btn btn_primary">
+                          <span> Смотреть </span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="panel__content js-content" data-tab="2">
-                <div class="panel__header">
+                <div class="panel__header panel__header-c">
                   <div class="user__pic user__pic-sm">
                     <img src="https://via.placeholder.com/36x36" alt="Наташа" />
                   </div>
-                  <div class="user__title"> Светка </div>
+                  <div class="user__title"> Наташа </div>
+                </div>
+                <div class="object">
+                  <dl class="options-list options-list__object">
+                    <dt class="options-list__title">Логин:</dt>
+                    <dd class="options-list__description">Larchik88</dd>
+                    <dt class="options-list__title">E-mail:</dt>
+                    <dd class="options-list__description">Larchik888@gmail.com </dd>
+                    <dt class="options-list__title">Дата создания:</dt>
+                    <dd class="options-list__description">2018-08-09 16:10 (2 месяца назад)</dd>
+                    <dt class="options-list__title">Дата обновления:</dt>
+                    <dd class="options-list__description">2018-08-09 16:10 (2 месяца назад) </dd>
+                  </dl>
                 </div>
               </div>
               <div class="panel__content js-content" data-tab="3">
-                <div class="panel__header">
+                <div class="panel__header panel__header-c">
                   <div class="user__pic user__pic-sm">
                     <img src="https://via.placeholder.com/36x36" alt="Наташа" />
                   </div>
-                  <div class="user__title"> Таня </div>
+                  <div class="user__title"> Наташа </div>
+                </div>
+                <div class="object object-maxw">
+                  <form action="#">
+                    <div class="user__row">
+                      <div class="user__grid-4">
+                        <div class="user__title"> Введите старый пароль </div>
+                      </div>
+                      <div class="user__grid-6">
+                        <div class="user__field">
+                          <input type="password" class="user__input" placeholder="Введите старый пароль">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user__row">
+                      <div class="user__grid-4">
+                        <div class="user__title"> Новый пароль </div>
+                      </div>
+                      <div class="user__grid-6">
+                        <div class="user__field">
+                          <input type="password" class="user__input" placeholder="Новый пароль">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user__row">
+                      <div class="user__grid-4">
+                        <div class="user__title"> Подтвердите пароль </div>
+                      </div>
+                      <div class="user__grid-6">
+                        <div class="user__field">
+                          <input type="password" class="user__input" placeholder="Подтвердите пароль">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user__btns">
+                      <div class="user__grid-12">
+                        <button type="submit" class="btn">
+                          <span> Изменить пароль </span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -419,7 +588,6 @@
           </div>
         </div>
       </div>
-      </div>
       <div class="footer__bottom">
         <div class="footer__bottom-in inner">
           <div class="footer__bottom-left">
@@ -493,7 +661,7 @@
               <!-- BEGIN popup-body -->
               <div class="popup__body">
                 <div class="form__row">
-                  <input type="text" class="form__field" placeholder="Введите ваше имя">
+                  <input type="email" class="form__field" placeholder="Введите ваш email">
                 </div>
                 <div class="form__row">
                   <input type="password" class="form__field" placeholder="Введите ваш пароль">
@@ -504,7 +672,7 @@
               <div class="popup__footer">
                 <div class="popup__checkbox">
                   <div class="checkbox">
-                    <input name="" id="remember" type="checkbox" class="checkbox__field">
+                    <input name="remember" id="remember" type="checkbox" class="checkbox__field">
                     <label for="remember" class="checkbox__label"><span class="checkbox__title">Запомнить меня</span></label>
                   </div>
                 </div>
